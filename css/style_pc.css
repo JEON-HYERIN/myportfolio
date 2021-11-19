@@ -22,8 +22,20 @@ br.only-m {
   position: relative;
 }
 
-#main .inner {
-  padding: 150px 0;
+section:not(.main-visual) .inner {
+  padding: 50px 0;
+}
+
+h3 {
+  margin-bottom: 50px;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  color: #264B57;
+}
+
+p.description {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* HEADER */
@@ -38,6 +50,7 @@ br.only-m {
 
 #header.minimize {
   background-color: #264B57;
+  box-shadow: 0 0 5px rgb(0 0 0 / 30%);
 }
 
 #header .inner {
@@ -78,7 +91,6 @@ br.only-m {
   margin: 0 4px;
   font-size: 16px;
   font-weight: 300;
-  letter-spacing: 1px;
   color: #fff;
 }
 
@@ -107,11 +119,12 @@ br.only-m {
   position: absolute;
   right: 0;
   top: 50%;
-  font-size: 55px;
+  font-size: 50px;
   font-weight: 400;
   line-height: 1.5em;
   text-align: left;
   color: #f5f5f5;
+  cursor: default;
 }
 
 .main-visual .title span {
@@ -123,6 +136,11 @@ br.only-m {
   background-color: #eeeeee;
 }
 
+section.main-about .inner {
+  padding: 150px 0;
+  overflow: hidden;
+}
+
 .main-about .inner > div {
   display: inline-block;
   vertical-align: middle;
@@ -130,6 +148,7 @@ br.only-m {
 
 .main-about .text-group {
   width: 55%;
+  float: left;
 }
 
 .main-about .title {
@@ -141,16 +160,92 @@ br.only-m {
 }
 
 .main-about .description {
-  font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.6em;
   color: #212121;
 }
 
+.main-about .description em {
+  color: #ad8c68;
+}
+
+.main-about .links {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.main-about .links a {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.main-about .links a + a {
+  margin-left: 4px;
+}
+
+.main-about .links a i {
+  font-size: 35px;
+  color: #264B57;
+}
+
+.main-about .links a span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+  color: #616161;
+}
+
 .main-about .image {
-  width: 40%;
-  margin-left: 20px;
+  width: 38%;
+  float: right;
 }
 
 .main-about .image img {
   border-radius: 10px;
+}
+
+/* SKILLS */
+.main-skills {
+  background-color: #e0e0e0;
+}
+
+.main-skills__menu li {
+  display: inline-block;
+  width: calc(33.33% - 30px);
+  margin: 0 0 50px 30px;
+  vertical-align: top;
+}
+
+.main-skills__menu li:nth-child(1),
+.main-skills__menu li:nth-child(4) {
+  margin-left: 0;
+}
+
+.main-skills__menu li .label {
+  display: block;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  color: #264B57;
+  border: 1px solid #264B57;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #F6F5F1;
+}
+
+.main-skills__menu li .title {
+  display: block;
+  margin: 10px 0;
+  font-size: 22px;
+  color: #263238;
+}
+
+.main-skills__menu li .description {
+  font-size: 16px;
+  line-height: 1.6em;
+  color: #263238;
 }
