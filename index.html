@@ -10,7 +10,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style_pc.css" media="screen and (min-width: 850.1px)" />
-  <link rel="stylesheet" href="./css/style_mobile.css" media="screen and (max-width: 850.0px)" />
+  <!-- <link rel="stylesheet" href="./css/style_mobile.css" media="screen and (max-width: 850.0px)" /> -->
   <!-- JS -->
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script defer src="./js/main.js"></script>
@@ -23,7 +23,7 @@
     <header id="header">
       <div class="inner">
         <h1>
-          <a href="#">
+          <a href="./index.html">
             <span>HYERIN</span>
           </a>
           </h1>
@@ -40,6 +40,7 @@
     </header>
     <!-- MAIN -->
     <main id="main">
+      <!-- VISUAL -->
       <section class="main-visual">
         <h2 class="hide">비주얼 영역</h2>
         <div class="inner">
@@ -49,8 +50,44 @@
           </div>
         </div>
       </section>
+      <!-- ABOUT -->
+      <section class="main-about">
+        <h2 class="hide">소개 영역</h2>
+        <div class="inner">
+          <div class="text-group">
+            <div class="title">
+                "Hello,<br />
+                my name is<br />
+                Hyerin"
+            </div>
+            <p class="description">
+              매일매일 성장하고 있는 웹 퍼블리셔 전혜린입니다.<br />
+              블로그에 공부 기록을 꾸준히 하여 새롭게 배운 내용은 내 것으로 만들고자 노력하고 있습니다.<br />
+              또한 협업을 위해 깃허브 터미널 명령어를 학습하고 커밋하는 습관을 들여<br /> 약 5개월간 1,000건 이상 commit한 경험이 있습니다.<br />
+              저에게 퍼블리싱은 제가 하고 싶은 일이 무엇인지 깨닫게 해준 직무입니다.<br />
+              이 열정으로 꾸준히 노력하여 늘 발전하는 웹 퍼블리셔가 되겠습니다.              
+            </p>
+          </div>
+          <div class="image">
+            <img src="./img/profile_green.jpg" alt="" />
+          </div>
+        </div>
+      </section>
     </main>
   </div>
+
+  <script>
+    // header color and height change
+    const header = document.querySelector('#header');
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 200) {
+        header.classList.add('minimize');
+      } else {
+        header.classList.remove('minimize');
+      }
+    });
+  </script>
 
 </body>
 </html>

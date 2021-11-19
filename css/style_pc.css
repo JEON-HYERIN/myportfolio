@@ -22,6 +22,10 @@ br.only-m {
   position: relative;
 }
 
+#main .inner {
+  padding: 150px 0;
+}
+
 /* HEADER */
 #header {
   position: fixed;
@@ -31,11 +35,21 @@ br.only-m {
   z-index: 9;
   background-color: transparent;
 }
+
+#header.minimize {
+  background-color: #264B57;
+}
+
 #header .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 110px;
+  transition: height .3s;
+}
+
+#header.minimize .inner {
+  height: 80px;
 }
 
 #header h1 a {
@@ -72,8 +86,9 @@ br.only-m {
 /* VISUAL */
 .main-visual {
   position: relative;
-  background: url("../img/visual.png") no-repeat center/cover;
+  background: url("../img/visual.png") no-repeat center/cover fixed;
 }
+
 .main-visual::before {
   content: '';
   position: absolute;
@@ -83,9 +98,11 @@ br.only-m {
   height: 100%;
   background-color: rgba(0, 0, 0, .3);
 }
+
 .main-visual .inner {
   height: 100vh;
 }
+
 .main-visual .title {
   position: absolute;
   right: 0;
@@ -99,4 +116,41 @@ br.only-m {
 
 .main-visual .title span {
   display: block;
+}
+
+/* ABOUT */
+.main-about {
+  background-color: #eeeeee;
+}
+
+.main-about .inner > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-about .text-group {
+  width: 55%;
+}
+
+.main-about .title {
+  margin-bottom: 50px;
+  font-size: 65px;
+  font-weight: 700;
+  text-align: left;
+  color: #264B57;
+}
+
+.main-about .description {
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.6em;
+  color: #212121;
+}
+
+.main-about .image {
+  width: 40%;
+  margin-left: 20px;
+}
+
+.main-about .image img {
+  border-radius: 10px;
 }
