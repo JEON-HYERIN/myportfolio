@@ -1,0 +1,354 @@
+/* COMMON */
+.mobile {
+  display: none !important;
+}
+
+.pc {
+  display: block !important;
+}
+
+br.only-m {
+  content: '';
+}
+
+br.only-pc {
+  content: normal;
+}
+
+#wrapper {
+  min-width: 280px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* INNER */
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* VIDEO */
+body.brewery .video {
+  position: relative;
+}
+
+body.brewery .video .video__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+
+body.brewery .video .video__title span {
+  font-size: 24px;
+}
+
+body.brewery .video .video__title em {
+  font-size: 45px;
+}
+
+/* PROGRAM */
+body.brewery .program {
+  color: #3d464b;
+  text-align: center;
+  background-color: #fff;
+}
+
+body.brewery .program .inner {
+  padding: 100px 0;
+}
+
+body.brewery .program .text-group {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+body.brewery .program .text-group .text.text2 {
+  padding: 15px 0 60px 0;
+}
+
+body.brewery .program .program__title {
+  font-size: 29px;
+  color: #1ecad3;
+  position: relative;
+  background-color: #fff;
+}
+
+body.brewery .program .program__description {
+  font-size: 16px;
+  padding: 30px 0;
+}
+
+body.brewery .program .program__content {
+  display: flex;
+  justify-content: space-evenly;
+  color: #55585b;
+  line-height: 1.6em;
+}
+
+body.brewery .program .program__content .tour,
+body.brewery .program .program__content .experience {
+  flex-basis: 48%;
+}
+
+body.brewery .program .program__content img {
+  min-height: 590px;
+  width: 100%;
+}
+
+body.brewery .program .program__content .text-group {
+  padding: 15px 0;
+}
+
+body.brewery .program .program__content .text-group .title {
+  font-size: 16px;
+}
+
+body.brewery .program .program__content .text-group .description {
+  font-size: 14px;
+}
+
+body.brewery .program .btn {
+  display: inline-block;
+  padding: 8px 50px;
+  font-size: 14px;
+  background-color: #1ecad3;
+  color: #fff;
+}
+
+/* INFORMATION */
+body.brewery .information {
+  background-color: #f4f4f4;
+  color: #3d464b;
+}
+
+body.brewery .information .inner {
+  padding: 50px 0;
+}
+
+body.brewery .information .information__title {
+  font-size: 24px;
+  padding: 0 0 30px 15px;
+}
+
+body.brewery .information .info {
+  display: flex;
+  line-height: 1.8em;
+}
+
+body.brewery .information .info > div {
+  padding: 0 15px;
+  flex-basis: 33.33%;
+}
+
+body.brewery .information .info .title {
+  font-size: 18px;
+  border-bottom: 2px solid #55585b;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+body.brewery .information .info .description .text {
+  padding: 20px 0;
+}
+
+body.brewery .information .info .business-day .description .text.text1 em {
+  font-size: 26px;
+}
+
+body.brewery .information .info .business-day .description .text.text1 span {
+  font-size: 16px;
+}
+
+body.brewery .information .info .business-day .description .text.text2 span {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+body.brewery .information .info .business-day .description .text.text2 span.place {
+  padding-right: 15px;
+}
+
+body.brewery .information .service .description {
+  font-size: 14px;
+}
+
+body.brewery .information .service .description .text span.place {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+body.brewery .information .service .description .text em {
+  color: #1ecad3;
+}
+
+body.brewery .information .service .description .text span:last-of-type {
+  font-weight: 400;
+}
+
+body.brewery .information .ask .description .text span.type {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+body.brewery .information .ask .description .text.text1 {
+  display: flex;
+}
+
+body.brewery .information .ask .description .text.text1 span.type {
+  margin-right: 15px;
+}
+
+body.brewery .information .ask .description .text.text1 img {
+  width: 52px;
+  height: 52px;
+}
+
+body.brewery .information .ask .description .text.text1 img:first-of-type {
+  margin-right: 15px;
+}
+
+body.brewery .information .ask .description .text.text2 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1023.9px) {
+  /* COMMON */
+  .pc {
+    display: none !important;
+  }
+
+  .mobile {
+    display: block !important;
+  }
+
+  br.only-m {
+    content: normal;
+  }
+
+  br.only-pc {
+    content: '';
+  }
+  
+  /* VIDEO */
+  body.brewery .video .video__title {
+    transform: translate(-50%, 0);
+  }
+
+  body.brewery .video .video__title span {
+    font-size: 12px;
+  }
+
+  body.brewery .video .video__title em {
+    font-size: 25px;
+  }
+
+  /* PROGRAM */
+  body.brewery .program .inner {
+    padding: 30px 0;
+  }
+
+  body.brewery .program .text-group {
+    font-size: 17px;
+  }
+
+  body.brewery .program .text-group .text.text2 {
+    padding-bottom: 30px;
+  }
+
+  body.brewery .program .program__description {
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  body.brewery .program .program__content {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  body.brewery .program .program__content img {
+    min-height: 0;
+  }
+
+  body.brewery .program .program__content .text-group .title {
+    font-size: 15px;
+  }
+
+  body.brewery .program .program__content .text-group .description {
+    font-size: 13px;
+  }
+
+  /* INFORMATION */
+  body.brewery .information .inner {
+    padding: 30px 15px;
+  }
+
+  body.brewery .information .information__title {
+    font-size: 16px;
+    padding-bottom: 15px;
+    padding-left: 0;
+  }
+
+  body.brewery .information .info {
+    flex-direction: column;
+  }
+
+  body.brewery .information .info > div {
+    padding: 0;
+  }
+
+  body.brewery .information .info .title {
+    font-size: 16px;
+  }
+
+  body.brewery .information .info .business-day .description .text.text1 em {
+    font-size: 17px;
+  }
+
+  body.brewery .information .info .business-day .description .text.text1 span {
+    font-size: 15px;
+  }
+
+  body.brewery .information .service .description {
+    font-size: 13px;
+  }
+
+  body.brewery .information .service .description .text span.place {
+    font-size: 16px;
+  }
+
+  body.brewery .information .ask .description .text span.type {
+    font-size: 16px;
+  }
+
+  body.brewery .information .ask .description .text.text2 {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023.9px) {
+  body.brewery .video video.pc {
+    display: block !important;
+  }
+
+  body.brewery .video video.mobile {
+    display: none !important;
+  }
+
+  body.brewery .video .video__title span {
+    font-size: 24px;
+  }
+  
+  body.brewery .video .video__title em {
+    font-size: 45px;
+  }
+}

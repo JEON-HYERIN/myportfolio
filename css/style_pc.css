@@ -27,7 +27,7 @@ section:not(.main-visual) .inner {
 }
 
 h3 {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 50px;
   font-weight: 700;
   text-align: center;
@@ -36,6 +36,7 @@ h3 {
 
 p.description {
   font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.6em;
 }
 
 /* HEADER */
@@ -160,7 +161,6 @@ section.main-about .inner {
 }
 
 .main-about .description {
-  line-height: 1.6em;
   color: #212121;
 }
 
@@ -241,11 +241,130 @@ section.main-about .inner {
   display: block;
   margin: 10px 0;
   font-size: 22px;
-  color: #263238;
+  color: #37474f;
 }
 
 .main-skills__menu li .description {
-  font-size: 16px;
-  line-height: 1.6em;
+  font-size: 15px;
   color: #263238;
 }
+
+/* WEB PUBLISHING */
+.main-web {
+  background-color: #eceff1;
+}
+
+.main-web .inner {}
+.main-web h3 {}
+.main-web__menu {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.main-web__menu li {
+  display: inline-block;
+}
+
+.main-web__menu li + li {
+
+}
+
+.main-web__menu li a {
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 8px 12px;
+}
+.main-web__contents {}
+
+.main-web__contents > img {
+  width: 100px;
+}
+
+.main-web__contents > div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main-web__contents .text-group {
+  width: 45%;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+}
+
+.main-web__contents .text-group > div {
+  margin-top: 15px;
+}
+
+.main-web__contents .text-group > div + div {
+
+}
+
+.main-web__contents em {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #546e7a;
+}
+
+.main-web__contents .summary {}
+
+.main-web__contents .summary .description {
+  font-size: 15px;
+}
+.main-web__contents .period {}
+.main-web__contents .participation {}
+.main-web__contents .method {}
+.main-web__contents .method .table {
+  display: table;
+  font-size: 15px;
+}
+
+.main-web__contents .method .table .row {
+  display: table-row;
+}
+
+.main-web__contents .method .table .row:nth-child(1) .cell {
+  padding-bottom: 5px;
+}
+
+.main-web__contents .method .table .cell {
+  display: table-cell;
+}
+
+.main-web__contents .method .table .cell:nth-child(2n) {
+  padding-left: 25px;
+}
+
+.main-web__contents .view {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.main-web__contents .view .btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #546e7a;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #f4f4f4;
+  background-color: #212121;
+  transition: .3s;
+}
+
+.main-web__contents.jejubeer .view .btn:hover {
+  color: #fff;
+  background-color: #1ecad3;
+}
+
+.main-web__contents .view .btn + .btn {
+  margin-left: 7px;
+}
+
+.main-web__contents .image {
+  width: 50%;
+  margin-left: 4%;
+}
+.main-web__contents .image img {}

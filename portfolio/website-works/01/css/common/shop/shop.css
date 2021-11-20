@@ -1,0 +1,119 @@
+/* COMMON */
+.mobile {
+  display: none !important;
+}
+
+.pc {
+  display: block !important;
+}
+
+br.only-m {
+  content: '';
+}
+
+br.only-pc {
+  content: normal;
+}
+
+#wrapper {
+  min-width: 280px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* INNER */
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* SHOP */
+body.shop .shop .inner {
+  overflow: hidden;
+}
+
+body.shop .shop .shop__items {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+body.shop .shop .shop__items .item {
+  flex-basis: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+body.shop .shop .shop__items .item img {
+  width: 100%;
+}
+
+body.shop .shop .shop__items .item .text-group {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+body.shop .shop .shop__items .item .text-group .mark {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body.shop .shop .shop__items .item .text-group .title {
+  font-size: 26px;
+  margin: 5px 0 10px 0;
+  font-weight: 400;
+}
+
+body.shop .shop .shop__items .item .text-group .description {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+body.shop .shop .more {
+  background-color: #1ecad3;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1023.9px) {
+  /* COMMON */
+  .pc {
+    display: none !important;
+  }
+
+  .mobile {
+    display: block !important;
+  }
+
+  body.shop br.only-m {
+    content: normal;
+  }
+
+  body.shop br.only-pc {
+    content: '';
+  }
+  
+  body.shop .shop .shop__items {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  body.shop .shop .shop__items .item .text-group .title {
+    font-size: 20px;
+  }
+
+  body.shop .shop .shop__items .item .text-group .description {
+    font-size: 24px;
+  }
+
+  body.shop .shop .more {
+    font-size: 17px;
+  }
+}

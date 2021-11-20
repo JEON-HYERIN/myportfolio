@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-title" content="DIVE INTO DIVERSITY" />
+  <meta name="description" content="올 여름, 제주맥주에 빠지다" />
+  <title>DIVE INTO DIVERSITY</title>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DIVE INTO DIVERSITY" />
+  <meta property="og:title" content="DIVE INTO DIVERSITY" />
+  <meta property="og:description" content="올 여름, 제주맥주에 빠지다" />
+  <meta property="og:image" content="./img/jejubeer.png" />
+  <meta property="og:url" content="https://jeon-hyerin.github.io/jejubeer" />
+    <!--Twitter Card-->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="DIVE INTO DIVERSITY" />
+  <meta property="twitter:title" content="DIVE INTO DIVERSITY" />
+  <meta property="twitter:description" content="올 여름, 제주맥주에 빠지다" />
+  <meta property="twitter:image" content="./img/jejubeer.png" />
+  <meta property="twitter:url" content="https://jeon-hyerin.github.io/jejubeer" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/254318af28.js" crossorigin="anonymous"></script>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <!-- Lodash -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style_pc.css" media="screen and (min-width: 1024.0px)" />
+  <link rel="stylesheet" href="./css/style_mobile.css" media="screen and (max-width: 1023.9px)" />
+  <!-- JS -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script defer src="./js/scrollmagic.js"></script>
+  <script defer src="./js/swiper.js"></script>
+  <script defer src="./js/common.js"></script>
+</head>
+<body class="main">
+
+  <div id="wrapper">
+    <a href="#main" id="skip-nav">본문 바로가기</a>
+    <!-- HEADER -->
+    <header id="header">
+      <div class="inner">
+        <h1><a href="./index.html"><img src="./img/header_logo.png" alt="제주맥주" /></a></h1>
+        <a href="#" class="toggle-btn">
+          <i class="fas fa-bars"><span>네비게이션 열기/닫기</span></i>
+        </a>
+        <!-- NAV -->
+        <nav>
+          <h2 class="hide">메인 메뉴</h2>
+          <ul class="main-menu">
+            <li data-link="experience">
+              <a href="./html/mycampingcar.html">
+                <span>EXPERIENCE</span>
+              </a>
+            </li>
+            <li data-link="collaboration">
+              <a href="./html/collaboration.html">
+                <span>COLLABORATION</span>
+              </a>
+            </li>
+            <li class="shop" data-link="shop">
+              <a href="./html/shop.html">
+                <span>SHOP</span>
+              </a>
+              <a href="#" class="cart mobile">
+                <img src="./img/menu-icon-cart.png" alt="장바구니" />
+              </a>
+            </li>
+            <li data-link="brewery">
+              <a href="./html/brewery.html">
+                <span>BREWERY</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- NAV -->
+        <nav>
+          <h2 class="hide">서브 메뉴</h2>
+          <ul class="sub-menu">
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+            <li><a href="#">CART</a></li>
+            <li><a href="#">RECRUIT</a></li>
+          </ul>
+          <a href="#" class="btn">양조장 예약</a>
+        </nav>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main id="main">
+      <!-- VIDEO -->
+      <section class="main-video">
+        <h2 class="hide">비디오 재생영역</h2>
+        <video src="./video/jb_tvc_event_web.mp4" class="pc" autoplay muted loop preload="metadata" playsinline></video>
+        <video src="./video/jb_tvc_event_mo.mp4" class="mobile" autoplay muted loop preload="metadata"
+          playsinline></video>
+        <div class="title">
+          <img src="./img/video_title.png" alt="DIVE INTO DIVERSITY" />
+        </div>
+      </section>
+      <!-- YOUTUBE -->
+      <section class="main-youtube scroll-spy">
+        <h2 class="hide">YOUTUBE PLAYER</h2>
+        <div class="inner">
+          <div class="youtube__area movement to-top delay-0">
+            <iframe width="1164" height="554"
+              src="https://www.youtube.com/embed/gWXdzlIQ-YE?list=TLGGBnLciC-8qN4xNzExMjAyMQ"
+              title="YouTube video player" style="border: none;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- PRODUCTS -->
+      <section class="main-products">
+        <h2 class="hide">상품 안내</h2>
+        <!-- jeju wit ale -->
+        <div class="wit product scroll-spy">
+          <h3 class="hide">제주 위트 에일</h3>
+          <div class="inner">
+            <div class="title movement to-top delay-0">
+              <img src="./img/witale_title.png" alt="제주 위트 에일" />
+            </div>
+            <div class="description">
+              <img src="./img/witale_img.png" alt="제주 위트 에일 이미지" class="movement to-top delay-1" />
+              <div class="text movement to-top delay-2">
+                <em>제주 위트 에일</em>은<br class="only-m" /> 제주 감귤 껍질의 상큼함과 섬세한 꽃 향,<br />
+                입 안 가득 부드럽게 퍼지는 시트러스향이 만나<br />
+                산뜻한 끝 맛을 선사하는 밀맥주입니다.
+              </div>
+            </div>
+            <div class="swiper visual-swiper movement to-top delay-3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide0">
+                </div>
+                <div class="swiper-slide slide1">
+                </div>
+                <div class="swiper-slide slide2">
+                </div>
+                <div class="swiper-slide slide3">
+                </div>
+              </div>
+              <div class="swiper-prev">
+                <span class="material-icons">
+                  arrow_back_ios
+                </span>
+              </div>
+              <div class="swiper-next">
+                <span class="material-icons">
+                  arrow_forward_ios
+                </span>
+              </div>
+            </div>
+            <div class="swiper sub-swiper movement to-top delay-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide0">
+                </div>
+                <div class="swiper-slide slide1">
+                </div>
+                <div class="swiper-slide slide2">
+                </div>
+                <div class="swiper-slide slide3">
+                </div>
+              </div>
+              <div class="swiper-prev">
+                <span class="material-icons">
+                  arrow_back_ios
+                </span>
+              </div>
+              <div class="swiper-next">
+                <span class="material-icons">
+                  arrow_forward_ios
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- jeju pellong ale -->
+        <div class="pellong product scroll-spy">
+          <h3 class="hide">제주 펠롱 에일</h3>
+          <div class="inner">
+            <div class="title movement to-top delay-0">
+              <img src="./img/pellongale_title.png" alt="제주 펠롱 에일" />
+            </div>
+            <div class="description">
+              <img src="./img/pellongale_img.png" alt="제주 펠롱 에일 이미지" class="movement to-top delay-1" />
+              <div class="text movement to-top delay-2">
+                <em>제주 펠롱 에일</em>은 반딧불이 반짝이는 곶자왈에서<br class="only-m" /> 영감을 받아 탄생하였습니다.<br />
+                다양하고 개성있는 홉들을 블렌딩하여<br />
+                시트러스 아로마와 진한 맥아의 맛이 어우러져<br />
+                풍부한 풍미를 선사하는 페일에일 맥주입니다.
+              </div>
+            </div>
+            <div class="swiper visual-swiper movement to-top delay-3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide0">
+                </div>
+                <div class="swiper-slide slide1">
+                </div>
+                <div class="swiper-slide slide2">
+                </div>
+                <div class="swiper-slide slide3">
+                </div>
+                <div class="swiper-slide slide4">
+                </div>
+                <div class="swiper-slide slide5">
+                </div>
+                <div class="swiper-slide slide6">
+                </div>
+              </div>
+              <div class="swiper-prev">
+                <span class="material-icons">
+                  arrow_back_ios
+                </span>
+              </div>
+              <div class="swiper-next">
+                <span class="material-icons">
+                  arrow_forward_ios
+                </span>
+              </div>
+            </div>
+            <div class="swiper sub-swiper movement to-top delay-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide0">
+                </div>
+                <div class="swiper-slide slide1">
+                </div>
+                <div class="swiper-slide slide2">
+                </div>
+                <div class="swiper-slide slide3">
+                </div>
+                <div class="swiper-slide slide4">
+                </div>
+                <div class="swiper-slide slide5">
+                </div>
+                <div class="swiper-slide slide6">
+                </div>
+              </div>
+              <div class="swiper-prev">
+                <span class="material-icons">
+                  arrow_back_ios
+                </span>
+              </div>
+              <div class="swiper-next">
+                <span class="material-icons">
+                  arrow_forward_ios
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- jeju geomeong ale -->
+        <div class="geomeong product scroll-spy">
+          <h3 class="hide">제주 거멍 에일</h3>
+          <div class="inner">
+            <div class="title movement to-top delay-0">
+              <img src="./img/geomeongale_title.png" alt="제주 거멍 에일" />
+            </div>
+            <div class="description">
+              <img src="./img/geomeongale_img.png" alt="제주 거멍 에일 이미지" class="movement to-top delay-1" />
+              <div class="text movement to-top delay-2">
+                <em>제주 거멍 에일</em>은<br class="only-m" /> 제주의 여름밤을 떠올리게 하는 짙은 빛깔 속에서,<br />
+                제주 흑보리와 초콜릿 밀로 완성된<br class="only-pc" />
+                은은한 달큰함과<br class="only-m" /> 경쾌한 풍미를 자아내는 흑맥주입니다.
+              </div>
+            </div>
+            <div class="swiper visual-swiper movement to-top delay-3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide0">
+                </div>
+                <div class="swiper-slide slide1">
+                </div>
+                <div class="swiper-slide slide2">
+                </div>
+                <div class="swiper-slide slide3">
+                </div>
+              </div>
+              <div class="swiper-prev">
+                <span class="material-icons">
+                  arrow_back_ios
+                </span>
+              </div>
+              <div class="swiper-next">
+                <span class="material-icons">
+                  arrow_forward_ios
+                </span>
+              </div>
+            </div>
+            <div class="swiper sub-swiper movement to-top delay-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide0">
+                </div>
+                <div class="swiper-slide slide1">
+                </div>
+                <div class="swiper-slide slide2">
+                </div>
+                <div class="swiper-slide slide3">
+                </div>
+              </div>
+              <div class="swiper-prev">
+                <span class="material-icons">
+                  arrow_back_ios
+                </span>
+              </div>
+              <div class="swiper-next">
+                <span class="material-icons">
+                  arrow_forward_ios
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- STORE -->
+      <section class="main-store">
+        <h2 class="hide">판매처</h2>
+        <div class="inner">
+          <p class="store__description">
+            제주맥주는<br /><em>전국 편의점 및 대형마트</em>에서 만나보실 수 있습니다.
+          </p>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/store_slide0.jpg" alt="CU" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide1.jpg" alt="GS25" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide2.jpg" alt="7-ELEVEN" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide3.jpg" alt="emart24" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide4.jpg" alt="emart" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide5.jpg" alt="LOTTE Mart" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide6.jpg" alt="Homeplus" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide7.jpg" alt="COSTOCO" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide8.jpg" alt="emart traders" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide9.jpg" alt="VIC Mart" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide10.jpg" alt="롯데백화점" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide11.jpg" alt="SHINSEGAE" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/store_slide12.jpg" alt="갤러리아" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="inner">
+        <div class="top">
+          <ul class="footer__menu">
+            <li class="active"><a href="#">ABOUT US</a></li>
+            <li class="active"><a href="#">OUR BEERS</a></li>
+            <li class="active"><a href="#">NEWS</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">IR</a></li>
+          </ul>
+          <ul class="footer__links">
+            <li><a href="https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw" target="_blank">
+                <img src="./img/search.png" alt="제주맥주 유투브 링크" />
+              </a></li>
+            <li><a href="https://www.facebook.com/jejubeerofficial" target="_blank">
+                <img src="./img/facebook.png" alt="제주맥주 페이스북 링크" />
+              </a></li>
+            <li><a href="https://www.instagram.com/jejubeerofficial" target="_blank">
+                <img src="./img/instagram.png" alt="제주맥주 인스타그램 링크" />
+              </a></li>
+            <li><a href="https://post.naver.com/my.nhn?memberNo=39126203" target="_blank">
+                <img src="./img/naver_blog.png" alt="제주맥주 네이버블로그 링크" />
+              </a></li>
+          </ul>
+        </div>
+        <div class="bottom">
+          <div class="info">
+            <span>제주맥주 주식회사&nbsp;&nbsp;대표이사 문혁기</span><br />
+            <span>본사) 제주특별자치도 제주시 한림읍 금능농공길 62-11&nbsp;&nbsp;<br class="only-m" />서울사무실) 서울특별시 중구 동호로 228 동호 38빌딩
+              6층</span><br />
+            <span>호스팅 제공자 (주)아임웹&nbsp;&nbsp;<br class="only-m" />사업자등록번호 616-86-27415&nbsp;&nbsp;<br
+                class="only-m" />통신판매업신고번호 제 2020-제주한림-0101 호</span><br />
+            <span>개인정보보호책임자 이용석&nbsp;&nbsp;<br class="only-m" />고객센터 02-2235-5559, jejubeer@jejubeer.co.kr</span>
+          </div>
+          <p class="copyright">
+            <small>COPYRIGHT <span class="this-year"></span>@ JEJU BEER COMPANY</small>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- FLOATING BUTTONS -->
+    <ul id="floating-btns">
+      <li class="chat-btn">
+        <a href="#">
+          <img src="./img/chat_btn.png" alt="채팅버튼" />
+        </a>
+      </li>
+      <li class="link-btn">
+        <a href="#">
+          <img src="./img/link_btn.png" alt="링크버튼" />
+        </a>
+      </li>
+      <li class="top-btn invisible">
+        <a href="#">
+          <img src="./img/top_btn.png" alt="상단버튼" />
+        </a>
+      </li>
+    </ul>
+    <!-- SHARE MODAL -->
+    <div id="share-modal" class="invisible">
+      <a href="#"><span class="hide">모달창 닫기</span></a>
+      <div class="wrap">
+        <em class="title">공유하기</em>
+        <ul class="share-modal__links">
+          <li>
+            <a href="https://accounts.kakao.com" class="btn" target="_blank"><img src="./img/share_talk.png"
+                alt="카카오톡 링크" /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" class="btn" target="_blank"><img src="./img/share_face.png"
+                alt="페이스북 링크" /></a>
+          </li>
+          <li>
+            <button class="btn url-btn"><img src="./img/share_url.png" alt="URL 복사" /></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- INQUIRY MODAL -->
+    <div id="inquiry-modal" class="invisible">
+      <div class="inquiry-modal__top fade-in">
+        <div class="title">
+          <h4>제주맥주 양조장</h4>
+          <ul class="btn-group">
+            <li>
+              <a href="#" class="btn">
+                <img src="./img/settings.png" alt="설정" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn close">
+                <img src="./img/close.png" alt="닫기" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="description">
+          <div></div>
+          <div></div>
+          <div class="show-hours">
+            <a href="#">운영시간 보기</a>
+          </div>
+          <div class="business-hours">
+            <a href="#">
+              월, 화, 수, 목, 금<br />
+              09:00 AM ~ 18:00 PM<br />
+              <br />
+              Timezone: Asia/Seoul
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="inquiry-modal__bottom">
+        <div class="channel-talk fade-in">
+          <div class="title">새로운 상담</div>
+          <div>
+            <div class="image">
+              <img src="./img/thumbnail.png" alt="제주맥주 로고" />
+            </div>
+            <div class="text-group">
+              <div class="text">
+                <p>제주맥주 양조장</p>
+                안녕하세요.<br />
+                대한민국 새로운 맥주문화의 발상지,<br /><em>제주맥주 양조장</em>입니다.
+              </div>
+              <div class="text">
+                양조장에 대해 무엇이 궁금하신가요?<br />
+                클릭해주세요!
+                <img src="./img/smile.png" alt="웃는 이모티콘" />
+              </div>
+            </div>
+          </div>
+          <button class="btn">
+            <img src="./img/send-filled-white.svg" alt="" />
+            새 문의하기
+          </button>
+        </div>
+        <div class="messenger fade-in">
+          <div class="title">다른 방법으로 상담</div>
+          <ul class="messenger__links">
+            <li>
+              <a href="https://accounts.kakao.com" class="btn" target="_blank">
+                <img src="./img/messenger_kakao.png" alt="카카오톡 링크" />
+              </a>
+            </li>
+            <li>
+              <button class="btn">
+                <img src="./img/messenger_url.png" alt="url 복사버튼" />
+              </button>
+            </li>
+            <li>
+              <a href="tel:010-0000-0000" class="btn">
+                <img src="./img/messenger_phone.png" alt="전화연결 링크" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    'use strict';
+
+    // 올해년도 구하기
+    const thisYear = document.querySelector('.this-year');
+    thisYear.textContent = new Date().getFullYear();
+
+    // 상단버튼(top-btn)
+    const header = document.querySelector('#header');
+    const headerHeight = header.getBoundingClientRect().height;
+    const topBtn = document.querySelector('#floating-btns .top-btn a');
+
+    window.addEventListener('scroll', _.throttle(function () {
+      if (window.pageYOffset > headerHeight) {
+        topBtn.parentElement.classList.remove('invisible');
+      } else {
+        topBtn.parentElement.classList.add('invisible');
+      }
+    }, 300));
+
+    topBtn.addEventListener('click', function () {
+      header.scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
+    // 토글버튼 클릭시 드롭메뉴 활성화
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const navEls = document.querySelectorAll('#header nav');
+    toggleBtn.addEventListener('click', function () {
+      navEls.forEach(function (navEl) {
+        navEl.classList.toggle('open');
+      });
+      header.classList.toggle('white');
+    });
+
+    // 링크버튼(link-btn)
+    const shareEl = document.querySelector('#share-modal');
+    const linkBtn = document.querySelector('#floating-btns .link-btn a');
+    linkBtn.addEventListener('click', function () {
+      shareEl.classList.remove('invisible');
+      enable();
+    });
+
+    shareEl.addEventListener('click', function () {
+      shareEl.classList.add('invisible');
+      disable();
+    });
+
+    // url버튼 클릭시 alert 실행
+    const urlBtn = shareEl.querySelector('.url-btn');
+    urlBtn.addEventListener('click', function () {
+      alert('URL이 복사 되었습니다. 원하시는 곳에 붙여넣기 해 주세요.');
+    });
+
+    // inquiry modal창 활성화
+    const chatBtn = document.querySelector('#floating-btns .chat-btn a');
+    const inquiryEl = document.querySelector('#inquiry-modal');
+    const closeBtn = inquiryEl.querySelector('.btn.close');
+    const fadeInEls = inquiryEl.querySelectorAll('.fade-in');
+    const inquiryHours = inquiryEl.querySelector('.show-hours');
+    const inquiryHoursOpen = inquiryEl.querySelector('.business-hours');
+
+    chatBtn.addEventListener('click', function () {
+      inquiryEl.classList.remove('invisible');
+      header.scrollIntoView();
+      fadeInEls.forEach(function (fadeInEl) {
+        fadeInEl.classList.remove('fade-in');
+      });
+    });
+
+    closeBtn.addEventListener('click', function () {
+      inquiryEl.classList.add('invisible');
+      inquiryHoursOpen.classList.remove('open');
+      fadeInEls.forEach(function (fadeInEl) {
+        fadeInEl.classList.add('fade-in');
+      });
+    });
+
+    // inquiry 운영시간 보기
+    inquiryHours.addEventListener('click', function () {
+      inquiryHoursOpen.classList.toggle('open');
+    });
+
+    // inquiry url복사 버튼
+    const messengerEl = inquiryEl.querySelector('.messenger');
+    const copyBtn = document.querySelector('.messenger__links li:nth-child(2) button.btn');
+
+    copyBtn.addEventListener('click', function () {
+      alert('링크가 복사되었습니다!');
+    });
+
+    // 운영시간 체크(9 to 6)
+    const hours = new Date().getHours();
+    const day = new Date().getDay();
+    const inquiryDescriptionEls = inquiryEl.querySelectorAll('.inquiry-modal__top .description div');
+
+    if ((hours >= 9 && hours < 18) && (day >= 1 && day <= 5)) {
+      inquiryDescriptionEls.forEach(function (el, index) {
+        switch (index) {
+          case 0:
+            el.textContent = '응답시간 보통';
+            el.classList.remove('night');
+            break;
+          case 1:
+            el.textContent = '보통 수십 분 내에 응답합니다.';
+            break;
+        }
+      });
+    } else {
+      inquiryDescriptionEls.forEach(function (el, index) {
+        switch (index) {
+          case 0:
+            el.textContent = '운영시간 아님';
+            el.classList.add('night');
+            break;
+          case 1:
+            el.textContent = '오전 9시부터 상담이 운영됩니다.';
+            break;
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
