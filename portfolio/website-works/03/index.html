@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-title" content="아웃백 스테이크하우스" />
+  <meta name="description" content="OUTBACK STEAKHOUSE" />
+  <title>메인 | 아웃백</title>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="아웃백 스테이크하우스" />
+  <meta property="og:title" content="아웃백 스테이크하우스" />
+  <meta property="og:description" content="OUTBACK STEAKHOUSE" />
+  <meta property="og:image" content="./img/sns.jpg" />
+  <meta property="og:url" content="https://jeon-hyerin.github.io/outback" />
+  <!--Twitter Card-->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="아웃백 스테이크하우스" />
+  <meta property="twitter:title" content="아웃백 스테이크하우스" />
+  <meta property="twitter:description" content="OUTBACK STEAKHOUSE" />
+  <meta property="twitter:image" content="./img/sns.jpg" />
+  <meta property="twitter:url" content="https://jeon-hyerin.github.io/outback" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/254318af28.js" crossorigin="anonymous"></script>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <!-- Lodash -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+  <!-- Gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style_pc.css" media="screen and (min-width: 850.1px)" />
+  <link rel="stylesheet" href="./css/style_mobile.css" media="screen and (max-width: 850.0px)" />
+  <!-- JS -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script defer src="./js/swiper.js"></script>
+  <script defer src="./js/common.js"></script>
+</head>
+<body class="main">
+
+  <div id="wrapper">
+    <a href="#main" id="skip-nav">본문 바로가기</a>
+    <!-- HEADER -->
+    <header id="header" class="active">
+      <div class="inner">
+        <h1>
+          <a href="./index.html">
+            <img src="./img/header_logo.png" alt="OUTBACK STEAKHOUSE" class="pc" />
+            <img src="./img/header_logo_m.png" alt="OUTBACK STEAKHOUSE" class="mobile" />
+          </a>
+        </h1>
+        <a href="#" class="open-btn mobile">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+          네비게이션 열기
+        </a>
+        <a href="#" class="close-btn hidden mobile">
+          <div class="material-icons">close<span class="hide">네비게이션 닫기</span></div>
+        </a>
+        <!-- NAV -->
+        <nav id="gnb">
+          <h2 class="hide">메인 메뉴</h2>
+          <ul>
+            <li>
+              <a href="./html/outbackStory.html" data-link="brand">
+                <span>BRAND</span>
+              </a>
+              <ul class="sub-menu" data-filter="brand">
+                <li><a href="./html/outbackStory.html">OUTBACK STORY</a></li>
+                <li><a href="./html/beefStory.html">BEEF STORY</a></li>
+                <li><a href="#">STEAK ACADEMY</a></li>
+                <li><a href="#">OUTBACK CSR</a></li>
+                <li><a href="#">PRESS CENTER</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./html/product.html" data-link="menu">
+                <span>MENU</span>
+              </a>
+              <ul class="sub-menu" data-filter="menu">
+                <li><a href="./html/product.html">T-BONE STEAK</a></li>
+                <li><a href="#">TOMAHAWK STEAK</a></li>
+                <li><a href="#">BLACK LABEL STEAKS</a></li>
+                <li><a href="#">STEAK &amp; FAVORITES</a></li>
+                <li><a href="#">LUNCH SET</a></li>
+                <li><a href="#">PASTA &amp; SALADS</a></li>
+                <li><a href="#">WINES</a></li>
+                <li><a href="#">DESSERTS &amp; OTHERS</a></li>
+                <li><a href="#">DELIVERY</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./html/membership.html" data-link="membership">
+                <span>MEMBERSHIP</span>
+              </a>
+              <ul class="sub-menu" data-filter="membership">
+                <li><a href="./html/membership.html">MEMBERSHIP BENEFIT</a></li>
+                <li><a href="#">BOOMERANG VIP</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./html/benefit.html" data-link="benefit">
+                <span>BENEFIT</span>
+              </a>
+              <ul class="sub-menu" data-filter="benefit">
+                <li><a href="./html/benefit.html">CREDIT CARDS</a></li>
+                <li><a href="#">SKT &amp; KT</a></li>
+                <li><a href="#">POINT PAYMENT</a></li>
+                <li><a href="#">VOUCHER</a></li>
+                <li><a href="#">EVENT</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span>STORE</span>
+              </a>
+            </li>
+            <li class="mobile">
+              <a href="#">
+                <span>아웃백 APP</span>
+              </a>
+            </li>
+            <li class="mobile">
+              <a href="#">
+                <span>아웃백 페이스북</span>
+              </a>
+            </li>
+            <li class="mobile">
+              <a href="#">
+                <span>공지사항</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="top-menu">
+          <li class="pc"><a href="#">고객의 소리</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#" class="btn">회원가입</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main id="main">
+      <!-- VISUAL -->
+      <section class="main-visual">
+        <h2 class="hide">비주얼 영역</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+              <img src="./img/visual_bg_m1.jpg" alt="" class="mobile" />
+            </div>
+            <div class="swiper-slide slide2">
+              <img src="./img/visual_bg_m2.jpg" alt="" class="mobile" />
+            </div>
+            <div class="swiper-slide slide3">
+              <img src="./img/visual_bg_m3.jpg" alt="" class="mobile" />
+            </div>
+            <div class="swiper-slide slide4">
+              <img src="./img/visual_bg_m4.jpg" alt="" class="mobile" />
+            </div>
+          </div>
+          <div class="swiper-prev pc">
+            <img src="./img/visual_prev.png" alt="이전" />
+          </div>
+          <div class="swiper-next pc">
+            <img src="./img/visual_next.png" alt="다음" />
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <div class="inner">
+        <!-- CF -->
+        <section class="main-cf">
+          <h2 class="hide">OUTBACK CF</h2>
+          <div class="youtube__wrapper">
+            <div class="youtube__area">
+              <iframe width="676" height="380" src="https://www.youtube.com/embed/oNZZ1Xr6OjI"
+                title="YouTube video player" style="border: none;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="text-group">
+            <div class="title">
+              BRAND CAMPAIGN<br />OUTBACK CF
+            </div>
+            <div class="sub-title">WE ARE TEAM OUTBACK</div>
+            <p class="description">
+              오직 당신을 위해 움직이는 우리는 팀 아웃백 입니다.<br />
+              No Rules, Just RIGHT.
+            </p>
+          </div>
+        </section>
+        <!-- PRODUCT -->
+        <section class="main-product">
+          <h2 class="hide">OUTBACK PRODUCT</h2>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide1">
+                <div class="text-group">
+                  <div class="title">GARLIC<br />RIBEYE</div>
+                  <div class="kor-title">갈릭 립아이</div>
+                  <p class="description">발사믹 소스에 조리한 마늘이 어우러진<br />꽃등심 스테이크</p>
+                </div>
+                <div class="image"></div>
+              </div>
+              <div class="swiper-slide slide2">
+                <div class="text-group">
+                  <div class="title">GOLD COAST<br />COCONUT<br />SHRIMP</div>
+                  <div class="kor-title">골드 코스트 코코넛 슈림프</div>
+                  <p class="description">달콤하고 고소한 코코넛 가루를 묻혀<br />
+                    바삭하게 튀긴 새우 요리</p>
+                </div>
+                <div class="image"></div>
+              </div>
+              <div class="swiper-slide slide3">
+                <div class="text-group">
+                  <div class="title">BABY BACK<br />RIBS</div>
+                  <div class="kor-title">베이비 백 립</div>
+                  <p class="description">부드러운 돼지갈비에 아웃백만의 특제 소스를<br />발라 구워낸 바비큐 요리</p>
+                </div>
+                <div class="image"></div>
+              </div>
+              <div class="swiper-slide slide4">
+                <div class="text-group">
+                  <div class="title">AUSSIE<br />CHEESE<br />FRIES</div>
+                  <div class="kor-title">오지 치즈 후라이즈</div>
+                  <p class="description">두툼한 감자튀김에 체다치즈, 잭치즈를 듬뿍<br />녹여 베이컨을 뿌린 메뉴</p>
+                </div>
+                <div class="image"></div>
+              </div>
+            </div>
+            <div class="swiper-prev pc">
+              <img src="./img/product_prev.png" alt="이전" />
+            </div>
+            <div class="swiper-next pc">
+              <img src="./img/product_next.png" alt="다음" />
+            </div>
+            <div class="swiper-pagination mobile"></div>
+          </div>
+        </section>
+        <!-- BENEFIT -->
+        <section class="main-benefit">
+          <h2 class="benefit__title">OUTBACK BENEFIT</h2>
+          <p class="benefit__description">다양한 멤버십과 제휴 할인 혜택을 누리세요</p>
+          <ul>
+            <li>
+              <a href="#">
+                <img src="./img/benefit_icon1.png" alt="" />
+                <div class="title">MEMBERSHIP</div>
+                <p class="description">
+                  부메랑클럽 가입하고<br />
+                  멤버십 혜택 풍성하게 즐겨보세요
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/benefit_icon2.png" alt="" />
+                <div class="title">DISCOUNT</div>
+                <p class="description">
+                  아웃백 제휴 할인 혜택의<br />
+                  기회를 놓치지 마세요
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/benefit_icon3.png" alt="" />
+                <div class="title">GIFT CARD</div>
+                <p class="description">
+                  소중한 사람에게<br />
+                  감사한 마음을 선물하세요
+                </p>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- REWARD -->
+        <section class="main-reward">
+          <h2 class="hide">OUTBACK REWARD</h2>
+          <div class="left">
+            <div class="text-group">
+              <div class="title">
+                BOOMERANG<br />
+                <em>REWARD</em>
+              </div>
+              <p class="description">
+                부메랑 카드<br />
+                리워드 혜택을 만나보세요
+              </p>
+              <div class="btns">
+                <a href="#" class="btn mobile">멤버십 가입</a>
+                <a href="#" class="btn">자세히 보기</a>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <ul class="pc">
+              <li class="item">
+                <span class="number">01</span>
+                <div class="title">와인 2잔 8,700원</div>
+                <p class="description">
+                  와인 2잔을 8,700원에<br />
+                  즐길 수 있는 혜택 제공
+                </p>
+              </li>
+              <li class="item">
+                <span class="number">02</span>
+                <div class="title">2021 신규가입 웰컴 쿠폰</div>
+                <p class="description">
+                  2021 신규 부메랑 회원을 위한<br />
+                  ‘치킨 텐더 샐러드’ 웰컴 쿠폰
+                </p>
+              </li>
+              <li class="item">
+                <span class="number">03</span>
+                <div class="title">1년 1회, 생일기념 쿠폰</div>
+                <p class="description">
+                  소중한 당신의 생일, 아웃백에서<br />
+                  1만원 할인 혜택 제공
+                </p>
+              </li>
+              <li class="item">
+                <span class="number">04</span>
+                <div class="title">블랙라벨 세트 할인 쿠폰</div>
+                <p class="description">
+                  블랙라벨 스테이크 세트 한정<br />
+                  1만원 할인 쿠폰 제공!
+                </p>
+              </li>
+              <li class="item">
+                <span class="number">05</span>
+                <div class="title">10% 할인 또는 2% 적립</div>
+                <p class="description">
+                  부메랑 카드만 있다면<br />
+                  10% 할인 또는 2% 적립!
+                </p>
+              </li>
+              <li class="item">
+                <span class="number">06</span>
+                <div class="title">부메랑 회원전용 이벤트 참여</div>
+                <p class="description">
+                  부메랑 전용 다양한 이벤트<br />
+                  참여 기회 제공
+                </p>
+              </li>
+            </ul>
+            <div class="mobile swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <span class="number">01</span>
+                  <div class="title">와인 2잔 8,700원</div>
+                  <p class="description">
+                    와인 2잔을 8,700원에<br />
+                    즐길 수 있는 혜택 제공
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <span class="number">02</span>
+                  <div class="title">2021 신규가입 웰컴 쿠폰</div>
+                  <p class="description">
+                    2021 신규 부메랑 회원을 위한<br />
+                    ‘치킨 텐더 샐러드’ 웰컴 쿠폰
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <span class="number">03</span>
+                  <div class="title">1년 1회, 생일기념 쿠폰</div>
+                  <p class="description">
+                    소중한 당신의 생일, 아웃백에서<br />
+                    1만원 할인 혜택 제공
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <span class="number">04</span>
+                  <div class="title">블랙라벨 세트 할인 쿠폰</div>
+                  <p class="description">
+                    블랙라벨 스테이크 세트 한정<br />
+                    1만원 할인 쿠폰 제공!
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <span class="number">05</span>
+                  <div class="title">10% 할인 또는 2% 적립</div>
+                  <p class="description">
+                    부메랑 카드만 있다면<br />
+                    10% 할인 또는 2% 적립!
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <span class="number">06</span>
+                  <div class="title">부메랑 회원전용 이벤트 참여</div>
+                  <p class="description">
+                    부메랑 전용 다양한 이벤트<br />
+                    참여 기회 제공
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <!-- SERVICE MENU -->
+        <ul class="service-menu">
+          <li class="reserve">
+            <a href="#">
+              <div class="text-group">
+                <img src="./img/service_menu_title1.png" alt="RESERVE" class="title" />
+                <p class="description">
+                  예약하기
+                </p>
+              </div>
+              <img src="./img/service_menu_icon1.png" alt="" class="icon" />
+            </a>
+          </li>
+          <li class="save-point">
+            <a href="#">
+              <div class="text-group">
+                <img src="./img/service_menu_title2.png" alt="SAVE POINT" class="title" />
+                <p class="description">
+                  사후 적립
+                </p>
+              </div>
+              <img src="./img/service_menu_icon2.png" alt="" class="icon" />
+            </a>
+          </li>
+          <li class="delivery">
+            <a href="#">
+              <div class="text-group">
+                <img src="./img/service_menu_title3.png" alt="DELIVERY" class="title" />
+                <p class="description">
+                  딜리버리 전화주문<br />
+                  1811-3650
+                </p>
+              </div>
+              <img src="./img/service_menu_icon3.png" alt="" class="icon pc" />
+              <img src="./img/service_menu_icon_m3.png" alt="" class="icon mobile" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="inner">
+        <div class="footer__logo pc">
+          <img src="./img/footer_logo.png" alt="OUTBACK STEAKHOUSE" />
+        </div>
+        <ul class="footer__menu">
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">홈페이지 이용약관</a></li>
+          <li><a href="#">위치정보 이용약관</a></li>
+          <li><a href="#">윤리경영</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li class="pc"><a href="#">모바일 아웃백</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+        <div class="btn-group pc">
+          <a href="#" class="btn">아웃백 소개</a>
+          <a href="#" class="btn">채용 안내</a>
+          <a href="#" class="btn">신규 입점 제의</a>
+        </div>
+        <div class="info">
+          <div class="top">
+            <span>대표이사 : 이상일</span>
+            <span>주소 : 서울 강남구 삼성로 508 2층</span><br />
+            <span>사업자등록번호 : 211-86-42619</span><br class="only-m" />
+            <span>통신판매업신고번호 : 제2019-서울강남-02729호</span>
+            <a href="#">사업자정보확인</a>
+            <p class="copyright">
+              <small>copyright ⓒ OUTBACK STEAKHOUSE all rights reserved.</small>
+            </p>
+          </div>
+          <div class="bottom">
+            <span>홈페이지 관련 문의 <em>070-7096-0416</em></span><br />
+            <span>상담시간 : 월~금 10:00~17:00<br class="only-m" />(토/일, 공휴일 휴무, 점심시간 12:00~13:30)</span><br />
+            <span>대표번호<em>1577-0500</em>&nbsp;&nbsp;/&nbsp;&nbsp;딜리버리 주문번호<em>1811-3650</em></span>
+          </div>
+        </div>
+        <ul class="sns pc">
+          <li>
+            <a href="#">
+              <img src="./img/footer_sns_instargram.png" alt="instargram" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/footer_sns_facebook.png" alt="facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/footer_sns_youtube.png" alt="youtube" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/footer_sns_kakao.png" alt="kakao" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- TO TOP BUTTON -->
+    <a href="#" id="to-top" class="invisible">
+      <img src="./img/btn_top.gif" alt="top" />
+    </a>
+  </div>
+
+  <script>
+    'use strict';
+
+    // 헤더영역 
+    const header = document.querySelector('#header');
+    const headerHeight = header.getBoundingClientRect().height;
+    window.addEventListener('scroll', _.throttle(function () {
+      if (window.pageYOffset > headerHeight) {
+        toTopBtn.classList.remove('invisible');
+      } else {
+        toTopBtn.classList.add('invisible');
+      }
+    }, 300));
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 0 && header.classList.contains('black') === false) {
+        header.classList.add('active');
+      } else {
+        header.classList.remove('active');
+      }
+    });
+
+    // gnb영역 이벤트 
+    const mainMenu = document.querySelector('#gnb > ul');
+    const subMenues = mainMenu.querySelectorAll('.sub-menu');
+    const mainMenuLists = document.querySelectorAll('#gnb > ul > li');
+    const anchers = document.querySelectorAll('#gnb > ul > li > a');
+    const icons = mainMenu.querySelectorAll('span.material-icons');
+
+    $('#gnb > ul > li > a').on('mouseenter focusin', function () {
+      if ($(window).width() >= 1024) {
+        var index = $('#gnb > ul > li').index($(this).parent());
+        $('#gnb > ul > li > .sub-menu').removeClass('on');
+        $('#gnb > ul > li:eq(' + index + ') > .sub-menu').addClass('on');
+      }
+    });
+
+    $('#header').on('mouseleave', function () {
+      $('#gnb > ul > li > .sub-menu').removeClass('on');
+    });
+
+    // 모바일버전 서브메뉴 오픈
+    $('#gnb > ul > li').each(function () {
+      if ($(this).find('ul').length > 0) {
+        $(this).find('> a').append('<span class="material-icons mobile" data-name="brand">navigate_next</span>');
+      }
+    });
+
+    $('#header .open-btn').on('click', function () {
+      $('#header .open-btn').addClass('hidden');
+      $('#header .close-btn').removeClass('hidden');
+      $('#gnb > ul > li.active > a').trigger('click');
+      enable();
+    });
+
+    $('#header .close-btn').on('click', function () {
+      $('#header .open-btn').removeClass('hidden');
+      $('#header .close-btn').addClass('hidden');
+      disable();
+    });
+
+    $('#gnb > ul > li > a').on('click focusin', function (e) {
+      if ($(window).width() < 1024) {
+        if ($(this).parent().find('ul').length > 0) {
+          e.preventDefault();
+          var height = 0;
+          $(this).next().find('> li').each(function () {
+            height += $(this).outerHeight(true);
+          });
+          $(this).next().css({
+            'height': height + 'px'
+          });
+          $(this).find('span.material-icons').addClass('rotate');
+          $(this).parent().siblings().find('ul').css({
+            'height': '0px'
+          });
+          $(this).parent().siblings().find('span.material-icons').removeClass('rotate');
+        }
+      }
+    });
+
+    $(window).on('resize', function () {
+      if ($(window).width() >= 1024) {
+        $('#gnb > ul > li > ul').removeAttr('style');
+        if ($('#gnb').hasClass('open') === true) {
+          disable();
+        }
+      } else if ($('#gnb').hasClass('open') === true) {
+        $('#header .open-btn').trigger('click');
+      }
+    });
+
+    // TO-TOP 버튼 클릭시 상단이동
+    const toTopBtn = document.querySelector('#to-top');
+    const wrapper = document.querySelector('#wrapper');
+    toTopBtn.addEventListener('click', function () {
+      wrapper.scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
+    // 토글버튼 활성화
+    gnbOpen();
+
+    function gnbOpen() {
+      const header = document.querySelector('#header');
+      const openBtn = document.querySelector('.open-btn');
+      const closeBtn = document.querySelector('.close-btn');
+      const gnbEl = document.querySelector('#gnb');
+      const topMenu = document.querySelector('#header .top-menu');
+      openBtn.addEventListener('click', function () {
+        header.classList.add('black');
+        header.classList.remove('active');
+        gnbEl.classList.add('open');
+        topMenu.classList.add('open');
+        openBtn.classList.add('hidden');
+        closeBtn.classList.remove('hidden');
+      });
+
+      closeBtn.addEventListener('click', function () {
+        header.classList.add('black');
+        header.classList.add('active');
+        gnbEl.classList.remove('open');
+        topMenu.classList.remove('open');
+        openBtn.classList.remove('hidden');
+        closeBtn.classList.add('hidden');
+      });
+    }
+  </script>
+
+</body>
+</html>

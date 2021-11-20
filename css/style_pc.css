@@ -295,6 +295,10 @@ section.main-about .inner {
   width: 100px;
 }
 
+.main-web__contents.outback > img {
+  background-color: #343436;
+}
+
 .main-web__contents > div {
   display: inline-block;
   vertical-align: top;
@@ -373,6 +377,13 @@ section.main-about .inner {
   border-color: #000;
   color: #000;
   background-color: #F0EDE6;
+}
+.main-web__contents.outback .view .btn {
+  background-color: #343436;
+}
+.main-web__contents.outback .view .btn:hover {
+  color: #fff;
+  background-color: #b10a11;
 }
 
 .main-web__contents .view .btn + .btn {

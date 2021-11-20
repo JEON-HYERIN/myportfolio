@@ -1,0 +1,152 @@
+/* HEADER */
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  background-color: rgba(52,52,54,1);
+}
+
+#header .inner {
+  height: 100px;
+}
+
+#header h1 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#header h1 a {
+  display: block;
+}
+
+#gnb {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 255px;
+}
+
+#gnb ul li a {
+  display: block;
+  color: #fff;
+}
+
+#gnb > ul {
+  overflow: hidden;
+}
+
+#gnb > ul > li {
+  float: left;
+  padding: 0 18px;
+}
+
+#gnb > ul > li > a {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100px;
+  letter-spacing: 1px;
+}
+
+#gnb > ul > li > a > span {
+  position: relative;
+  padding-bottom: 10px;
+  pointer-events: none;
+}
+
+#gnb > ul > li > a > span::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #be161e;
+  transition: 350ms;
+}
+
+#gnb > ul > li.active > a > span::after {
+  width: 100%;
+}
+
+#gnb > ul > li > .sub-menu {
+  position: absolute;
+  top: 100px;
+  padding: 28px 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  height: 0;
+  transition: 300ms;
+  z-index: 9;
+  pointer-events: none;
+}
+
+#gnb > ul > li.active:hover > .sub-menu {
+  height: auto;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#gnb > ul > li > .sub-menu > li > a {
+  color: #fffefe;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#gnb > ul > li > .sub-menu > li + li {
+  margin-top: 18px;
+}
+
+#header .top-menu {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+#header .top-menu li {
+  float: left;
+  padding: 35px 0 35px 20px;
+}
+
+#header .top-menu li:first-child {
+  padding-left: 0;
+}
+
+#header .top-menu li a {
+  font-size: 13px;
+  color: #999;
+  line-height: 30px;
+}
+
+#header .top-menu li a.btn {
+  color: #fff;
+  width: 86px;
+  line-height: 28px;
+  border: 1px solid #555;
+  background-color: #555;
+}
+
+@media screen and (max-width: 1200px) {
+
+  /* HEADER */
+  #header h1 {
+    left: 15px;
+  }
+
+  #gnb {
+    padding-left: 180px;
+  }
+
+  #header .top-menu {
+    right: 15px;
+  }
+}

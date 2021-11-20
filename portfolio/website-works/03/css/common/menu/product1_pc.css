@@ -1,0 +1,225 @@
+/* COMMON */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.mobile {
+  display: none !important;
+}
+
+.pc {
+  display: block !important;
+}
+
+br.only-m {
+  content: '';
+}
+
+#wrapper {
+  min-width: 1024px;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* VISUAL */
+body.product .visual {
+  margin-top: 100px;
+  background: url("../../img/menu/t-bone/visual_bg.jpg") no-repeat center/cover;
+}
+
+body.product .visual .inner {
+  height: 700px;
+}
+
+body.product .visual .product {
+  position: absolute;
+  right: 15px;
+  top: 50px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+body.product .visual .product .product__info {}
+
+body.product .visual .product .product__info .title {
+  margin-bottom: 10px;
+}
+
+body.product .visual .product .product__info .title .kor {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 2em;
+}
+
+body.product .visual .product .product__info .title .eng {
+  font-size: 35px;
+  line-height: 1em;
+}
+
+body.product .visual .product .product__info .description {
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+
+body.product .visual .product .product__detail .type {
+  margin: 25px 0;
+}
+
+body.product .visual .product .product__detail ul {
+  padding-bottom: 60px;
+}
+
+body.product .visual .product .product__detail ul .item .item__name {
+  display: inline-block;
+  padding-right: 30px;
+  font-size: 18px;
+}
+
+body.product .visual .product .product__detail ul .item .item__contents {
+  display: inline-block;
+}
+
+body.product .visual .product .product__detail ul .item .item__contents .label {
+  position: relative;
+  display: inline-block;
+  margin-right: 17px;
+  padding: 0 8px 0 13px;
+  font-weight: 700;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  border-radius: 2px;
+  background-color: #50473d;
+}
+
+body.product .visual .product .product__detail ul .item .item__contents .label::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-width: 13px 0 13px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #50473d;
+}
+
+body.product .visual .product .product__detail ul .item .item__contents .price {
+  color: #b59371;
+}
+
+body.product .visual .product .product__detail ul .item .item__contents .price em {
+  font-size: 34px;
+}
+
+body.product .visual .product .btn-group {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+body.product .visual .product .btn-group .btn {
+  float: left;
+  width: 50%;
+  padding: 10px 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+body.product .visual .product .btn-group .btn.btn--brown {
+  background-color: rgba(144, 115, 84, 0.95);
+}
+
+body.product .visual .product .btn-group .btn.btn--red {
+  background-color: rgba(177, 10, 17, 0.95);
+}
+
+body.product .visual .product .btn-group .btn img {
+  display: inline-block !important;
+  position: relative;
+  top: -10px;
+}
+
+body.product .visual .product .btn-group .btn span {
+  display: block;
+  position: relative;
+  top: -15px;
+}
+
+/* MAIN */
+body.product #main {
+  background-color: #fff;
+}
+
+ /* SIDE DISH */
+body.product .side-dish {
+  padding-left: 20px;
+}
+
+/* NOTICE */
+body.product .notice {
+  padding-bottom: 200px;
+}
+
+body.product .notice .todays__notice {
+  padding: 60px;
+  background: url("../../img/menu/t-bone/notice_bg.jpg") no-repeat center/cover;
+  text-align: center;
+  color: #fff;
+}
+
+body.product .notice .todays__notice em {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+body.product .notice .todays__notice span {
+  font-size: 18px;
+}
+
+body.product .notice .text-group {
+  padding: 40px 0 40px 20px;
+  
+}
+
+body.product .notice .text-group .text {
+  overflow: hidden;
+}
+
+body.product .notice .text-group .text .title {
+  float: left;
+  width: 160px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #222;
+}
+
+body.product .notice .text-group .text ul.description {
+  float: left;
+  padding: 5px 0 20px;
+}
+
+body.product .notice .text-group .text ul.description li {
+  color: #666;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1023.9px) {
+
+  /* VISUAL */
+  body.product .visual {
+    margin-top: 56px;
+  }
+}

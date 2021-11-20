@@ -1,0 +1,122 @@
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+  font-size: 1em;
+  line-height: normal;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, button {
+  margin: 0; 
+  padding: 0;
+}
+
+address, em, i, cite {
+  font-style: normal;
+}
+
+em,
+strong {
+  font-weight: 700;
+}
+
+button,
+.btn {
+  display: block;
+  border: none;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+i[class^="fa"] span {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  position: absolute;
+  left: -9999px;
+}
+
+#skip-nav {
+  position: fixed;
+  left: 0;
+  top: -40px;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  font-size: 16px;
+  z-index: 100;
+  transition: .3s;
+}
+
+#skip-nav:focus {
+  top: 0;
+}
+
+.counting {
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+}
+
+.counting > span {
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.counting > span > span.fixed {
+  display: block;
+}
+
+.counting > span > span.count {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  transition: top 5s ease-out 0s;
+  opacity: 0;
+}
+
+.counting > span > span.count > span {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.counting > span.count-down > span.fixed {
+  opacity: 0;
+}
+
+.counting >span.count-down > span.count {
+  opacity: 1;
+}
