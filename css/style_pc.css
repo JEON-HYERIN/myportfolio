@@ -214,6 +214,8 @@ section.main-about .inner {
   display: inline-block;
   width: calc(33.33% - 30px);
   margin: 0 0 50px 30px;
+  padding: 0 15px;
+  box-sizing: border-box;
   vertical-align: top;
 }
 
@@ -230,18 +232,20 @@ section.main-about .inner {
   text-align: center;
   font-size: 30px;
   font-weight: 300;
-  color: #264B57;
-  border: 1px solid #264B57;
+  color: #000;
+  border: 1px solid #000;
   border-radius: 4px;
   box-sizing: border-box;
   background-color: #F6F5F1;
+  display: none;
 }
 
 .main-skills__menu li .title {
   display: block;
   margin: 10px 0;
-  font-size: 22px;
-  color: #37474f;
+  font-size: 24px;
+  font-weight: 300;
+  color: #000;
 }
 
 .main-skills__menu li .description {
@@ -254,8 +258,6 @@ section.main-about .inner {
   background-color: #eceff1;
 }
 
-.main-web .inner {}
-.main-web h3 {}
 .main-web__menu {
   margin-bottom: 20px;
   text-align: center;
@@ -266,7 +268,13 @@ section.main-about .inner {
 }
 
 .main-web__menu li + li {
+  margin-left: 8px;
+}
 
+.main-web__menu li.selected {
+  border-radius: 6px;
+  color: #fff;
+  background-color: #264B57;
 }
 
 .main-web__menu li a {
@@ -275,7 +283,13 @@ section.main-about .inner {
   font-weight: 300;
   padding: 8px 12px;
 }
-.main-web__contents {}
+.main-web__contents {
+  display: none;
+}
+
+.main-web__contents.visible {
+  display: block;
+}
 
 .main-web__contents > img {
   width: 100px;
@@ -296,10 +310,6 @@ section.main-about .inner {
   margin-top: 15px;
 }
 
-.main-web__contents .text-group > div + div {
-
-}
-
 .main-web__contents em {
   display: block;
   margin-bottom: 5px;
@@ -308,14 +318,10 @@ section.main-about .inner {
   color: #546e7a;
 }
 
-.main-web__contents .summary {}
-
 .main-web__contents .summary .description {
   font-size: 15px;
 }
-.main-web__contents .period {}
-.main-web__contents .participation {}
-.main-web__contents .method {}
+
 .main-web__contents .method .table {
   display: table;
   font-size: 15px;
@@ -350,13 +356,23 @@ section.main-about .inner {
   box-sizing: border-box;
   font-size: 14px;
   color: #f4f4f4;
-  background-color: #212121;
   transition: .3s;
 }
 
+.main-web__contents.jejubeer .view .btn {
+  background-color: #546e7a;
+}
 .main-web__contents.jejubeer .view .btn:hover {
   color: #fff;
   background-color: #1ecad3;
+}
+.main-web__contents.cotieshop .view .btn {
+  background-color: #212121;
+}
+.main-web__contents.cotieshop .view .btn:hover {
+  border-color: #000;
+  color: #000;
+  background-color: #F0EDE6;
 }
 
 .main-web__contents .view .btn + .btn {
@@ -367,4 +383,3 @@ section.main-about .inner {
   width: 50%;
   margin-left: 4%;
 }
-.main-web__contents .image img {}

@@ -1,4 +1,17 @@
 /* MOBILE MOCKUP */
+body {
+  margin: 0;
+}
+
+.mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  height: 100vh;
+}
+
 .mobile-mockup {
   position: relative;
   width: 430px;

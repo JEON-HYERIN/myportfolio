@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-title" content="꼬띠샵 l 반려동물에게 줄 수 있는 최고의 선물" />
+  <meta name="description" content="우리가 진짜를 구입하고 그 가치를 평생 느끼며 만족하고 즐기는 것처럼 우리의 반려동물들도 값진 소재에 더해진 장인의 손길과 시간이 흘러도 세련된 디자인을 누리기에 충분합니다." />
+  <title>꼬띠샵 l 반려동물에게 줄 수 있는 최고의 선물</title>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="꼬띠샵" />
+  <meta property="og:title" content="꼬띠샵 l 반려동물에게 줄 수 있는 최고의 선물" />
+  <meta property="og:description" content="우리가 진짜를 구입하고 그 가치를 평생 느끼며 만족하고 즐기는 것처럼 우리의 반려동물들도 값진 소재에 더해진 장인의 손길과 시간이 흘러도 세련된 디자인을 누리기에 충분합니다." />
+  <meta property="og:image" content="./img/og_image.jpg" />
+  <meta property="og:url" content="https://jeon-hyerin.github.io/cotieshop/" />
+    <!--Twitter Card-->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="꼬띠샵" />
+  <meta property="twitter:title" content="꼬띠샵 l 반려동물에게 줄 수 있는 최고의 선물" />
+  <meta property="twitter:description" content="우리가 진짜를 구입하고 그 가치를 평생 느끼며 만족하고 즐기는 것처럼 우리의 반려동물들도 값진 소재에 더해진 장인의 손길과 시간이 흘러도 세련된 디자인을 누리기에 충분합니다." />
+  <meta property="twitter:image" content="./img/og_image.jpg" />
+  <meta property="twitter:url" content="https://jeon-hyerin.github.io/cotieshop" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.png" />
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/254318af28.js" crossorigin="anonymous"></script>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <!-- Lodash -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>  
+  <!--GSAP-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style_pc.css" media="screen and (min-width: 850.1px)" />
+  <link rel="stylesheet" href="./css/style_mobile.css" media="screen and (max-width: 850.0px)" />
+  <!-- JS -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script defer src="./js/swiper.js"></script>
+  <script defer src="./js/common.js"></script>
+</head>
+<body class="main">
+
+  <div id="wrapper">
+    <a href="#main" id="skip-nav">본문 바로가기</a>
+    <!-- HEADER -->
+    <header id="header">
+      <div class="inner">
+        <h1><a href="./index.html"><img src="./img/header_logo.svg" alt="cotie SHOP" /></a></h1>
+        <a href="#" class="menu-btn mobile">
+          <span></span>
+          <span></span>
+          <span class="hide">네비게이션 열기</span>
+        </a>
+        <a href="#" class="close-btn mobile invisible">
+          <i class="fas fa-times"><span>네비게이션 닫기</span></i>
+        </a>
+        <nav id="gnb">
+          <h2 class="hide">메인 네비게이션</h2>
+          <ul>
+            <li data-link="brands">
+              <a href="./html/brands.html">Brands</a>
+              <ul class="sub-menu">
+                <li data-menu="pet-so-chic">
+                  <a href="#"><span>펫 소 시크</span></a>
+                </li>
+                <li data-menu="maxbone"><a href="#"><span>맥스본</span></a></li>
+                <li data-menu="milk-pepper"><a href="./html/brands.html"><span>밀크 앤 페퍼</span></a></li>
+              </ul>
+            </li>
+            <li data-link="outdoor">
+              <a href="./html/outdoor.html">Outdoor</a>
+              <ul class="sub-menu">
+                <li data-menu="fashion"><a href="./html/outdoor.html"><span>패션</span></a></li>
+                <li data-menu="collar"><a href="./html/collar.html"><span>목줄</span></a></li>
+                <li data-menu="leash"><a href="./html/leash.html"><span>리드줄</span></a></li>
+                <li data-menu="harness"><a href="./html/harness.html"><span>하네스</span></a></li>
+                <li data-menu="bag"><a href="./html/bag.html"><span>이동가방</span></a></li>
+              </ul>
+            </li>
+            <li data-link="indoor">
+              <a href="./html/indoor.html">Indoor</a>
+              <ul class="sub-menu">
+                <li data-menu="toy"><a href="./html/indoor.html"><span>장난감</span></a></li>
+                <li data-menu="living"><a href="./html/living.html"><span>리빙</span></a></li>
+                <li data-menu="cat"><a href="./html/cat.html"><span>고양이</span></a></li>
+              </ul>
+            </li>
+            <li data-link="cotielog"><a href="./html/cotielog.html">Cotielog</a></li>
+            <li data-link="store"><a href="./html/store.html">Store</a></li>
+            <li data-link="about-us" class="mobile"><a href="#">About Us</a></li>
+            <li data-link="buy-shop" class="mobile"><a href="#">Buy Shop</a></li>
+          </ul>
+        </nav>
+        <ul class="top-menu">
+          <li>
+            <a href="#">
+              <i class="fas fa-search"></i>
+              <span class="hide">검색창 열기</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Buy Shop</span>
+              <i class="fas fa-shopping-bag"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- SEARCH MODAL -->
+    <div class="search-modal__wrap invisible">
+      <div id="search-modal">
+        <div class="inner">
+          <h2 class="hide">검색창</h2>
+          <div class="search-modal__header">
+            <a href="./index.html" class="logo pc">
+              <img src="./img/header_logo.svg" alt="cotie SHOP" />
+            </a>
+            <a href="#" class="close-btn">
+              <i class="fas fa-times"><span>닫기</span></i>
+            </a>
+          </div>
+          <div class="search-modal__field">
+            <form action="#">
+              <input type="text" placeholder="검색어를 입력해주세요">
+            </form>
+            <a href="#">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+          <div class="search-modal__keyword">
+            <ul>
+              <li><a href="#">#겨울</a></li>
+              <li><a href="#">#패딩</a></li>
+              <li><a href="#">#프랑스</a></li>
+              <li><a href="#">#후드</a></li>
+              <li><a href="#">#장난감</a></li>
+            </ul>
+          </div>
+          <img src="./img/layer_twerking.gif" alt="" class="floating" />
+        </div>
+      </div>
+    </div>
+    <!-- MAIN -->
+    <main id="main">
+      <!-- VISUAL -->
+      <section class="main-visual visual">
+        <h2 class="hide">비주얼 영역</h2>
+        <div class="inner">
+          <h3 class="title">
+            Every Pet Deserves<br />
+            The Best
+          </h3>
+          <div class="image">
+            <img src="./img/main-visual.gif" alt="Every Pet Deserves The Best" />
+          </div>
+          <p class="description">
+            가치있는 우리는 사랑받기 충분합니다.<br />
+            값진 소재와 세련된 디자인을 함께 즐기고 만족할 수 있습니다.
+          </p>
+          <a href="#" class="btn">
+            <span>Discover more</span>
+          </a>
+          <img src="./img/floating_flag.png" alt="" class="floating floating1" />
+          <img src="./img/floating_cloud.png" alt="" class="floating floating2" />
+          <img src="./img/floating_bone.png" alt="" class="floating floating3" />
+        </div>
+      </section>
+      <!-- BRAND -->
+      <section class="main-brand">
+        <h2 class="hide">브랜드 영역</h2>
+        <div class="inner">
+          <img src="./img/floating_fish.png" alt="" class="floating floating4" />
+          <h3>Brands</h3>
+          <div class="pet-so-chic">
+            <div class="image">
+              <img src="./img/brand_visual.gif" alt="" />
+            </div>
+            <div class="content-group">
+              <div class="title">
+                <img src="./img/logo_petsoshic.svg" alt="PET SO SHIC" />
+              </div>
+              <p class="description">
+                프랑스 파리는 파리지앵의 본고장입니다.<br class="only-pc" />
+                이곳에서 시작된 펫 소 시크는<br class="only-pc" />
+                우아함, 세련됨, 고상함을 대표하고 흠잡을 데 없는<br class="only-pc" />
+                스타일을 연출합니다.
+              </p>
+              <a href="#" class="btn">
+                <span>Discover more</span>
+              </a>
+            </div>
+            <img src="./img/pattern-grass-05.jpg" alt="" class="pattern pattern1" />
+            <img src="./img/pattern-grass-01.jpg" alt="" class="pattern pattern2" />
+            <img src="./img/pattern-grass-02.jpg" alt="" class="pattern pattern3" />
+            <img src="./img/pattern-footprint.png" alt="" class="pattern pattern4" />
+            <div class="video__area">
+              <video src="./video/pet-so-chic.mp4" autoplay muted loop preload="metadata" playsinline
+                poster="./img/petsoshic_poster.jpg"></video>
+            </div>
+          </div>
+          <div class="maxbone scroll-spy">
+            <img src="./img/layer_toy.png" alt="" class="floating pc" />
+            <div class="wrap">
+              <div class="image">
+                <img src="./img/brand_maxbone.gif" alt="" />
+              </div>
+              <div class="content-group">
+                <div class="title">
+                  <img src="./img/logo_maxbone.svg" alt="maxbone" />
+                </div>
+                <p class="description">
+                  반려동물과 내가 함께하는<br class="only-pc" />
+                  스타일의 최종 목적지는 맥스본입니다.<br class="only-pc" />
+                  현대적인 라이프 스타일을 반영하고 재미와 기능을<br class="only-pc" />
+                  같이 생각합니다.
+                </p>
+                <a href="#" class="btn">
+                  <span>Discover more</span>
+                </a>
+              </div>
+            </div>
+            <div class="video__area">
+              <video src="./video/maxbone.mp4" autoplay muted loop preload="metadata" playsinline
+                poster="./img/maxbone_poster.jpg"></video>
+            </div>
+            <img src="./img/layer_maxbone.jpg" alt="" class="pattern pattern1" />
+            <img src="./img/layer_maxbone.jpg" alt="" class="pattern pattern2" />
+            <img src="./img/layer_maxbone.jpg" alt="" class="pattern pattern3" />
+          </div>
+          <div class="milk-and-pepper scroll-spy">
+            <div class="image">
+              <img src="./img/brand_milkpepper.jpg" alt="MILK & PEPPER" />
+            </div>
+            <div class="content-group">
+              <div class="title">
+                <img src="./img/logo_milkpepper.svg" alt="PET SO SHIC" />
+              </div>
+              <p class="description">
+                일년 내내 우아할 수 있는<br class="only-pc" />
+                밀크&amp;페퍼는 세련되고 독창적입니다.<br class="only-pc" />
+                계절마다 제안하는 상상력과 영감은 최적의<br class="only-pc" />
+                스타일리쉬를 제공합니다.
+              </p>
+              <a href="#" class="btn">
+                <span>Discover more</span>
+              </a>
+            </div>
+            <img src="./img/layer_hand.png" alt="" class="floating floating1 pc" />
+            <img src="./img/layer_heart.png" alt="" class="floating floating2 pc" />
+          </div>
+        </div>
+      </section>
+      <!-- NEW -->
+      <section class="main-new product scroll-spy">
+        <h2 class="hide">꼬띠샵 신상품</h2>
+        <div class="inner">
+          <h3>New</h3>
+          <div class="swiper pc">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="image">
+                    <img src="./img/new_img1.jpg" alt="밀크 앤 페퍼 ARTIMON Hoody (아티멍 후디)" class="front" />
+                    <img src="./img/new_img1_back.jpg" alt="밀크 앤 페퍼 ARTIMON Hoody (아티멍 후디)" class="back" />
+                  </div>
+                  <div class="text-group">
+                    <em class="title">MILK &amp; PEPPER</em>
+                    <p class="description">
+                      밀크 앤 페퍼 ARTIMON Hoody (아티멍 후디)
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="image">
+                    <img src="./img/new_img2.png"
+                      alt="맥스본 Christian Cowan x max-bone Jumper(크리스찬 코완 x 맥스본 점퍼) Hot Pink (핫핑크)" class="front" />
+                    <img src="./img/new_img2_back.png"
+                      alt="맥스본 Christian Cowan x max-bone Jumper(크리스찬 코완 x 맥스본 점퍼) Hot Pink (핫핑크)" class="back" />
+                  </div>
+                  <div class="text-group">
+                    <em class="title">MAXBONE</em>
+                    <p class="description">
+                      맥스본 Christian Cowan x max-bone Jumper(크리스찬 코완 x 맥스본 점퍼)
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="image">
+                    <img src="./img/new_img3.jpg" alt="맥스본 Tai Knit Jumper (타이 니트 점퍼) Taupe (토프)" class="front" />
+                    <img src="./img/new_img3_back.jpg" alt="맥스본 Tai Knit Jumper (타이 니트 점퍼) Taupe (토프)" class="back" />
+                  </div>
+                  <div class="text-group">
+                    <em class="title">MAXBONE</em>
+                    <p class="description">
+                      맥스본 Tai Knit Jumper (타이 니트 점퍼) Taupe (토프)
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="image">
+                    <img src="./img/new_img4.jpg" alt="밀크 앤 페퍼 ROOKIE Hoody (루키 후디)" class="front" />
+                    <img src="./img/new_img4_back.jpg" alt="밀크 앤 페퍼 ROOKIE Hoody (루키 후디)" class="back" />
+                  </div>
+                  <div class="text-group">
+                    <em class="title">MILK &amp; PEPPER</em>
+                    <p class="description">
+                      밀크 앤 페퍼 ROOKIE Hoody (루키 후디)
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="image">
+                    <img src="./img/new_img5.jpg" alt="펫 소 시크 Warm so chic(패딩 자켓) – Red(레드)" class="front" />
+                    <img src="./img/new_img5_back.jpg" alt="펫 소 시크 Warm so chic(패딩 자켓) – Red(레드)" class="back" />
+                  </div>
+                  <div class="text-group">
+                    <em class="title">PET SO CHIC</em>
+                    <p class="description">
+                      펫 소 시크 Warm so chic(패딩 자켓) – Red(레드)
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="image">
+                    <img src="./img/new_img6.jpg" alt="밀크 앤 페퍼 MONGO Hoody (몽고 후디)" class="front" />
+                    <img src="./img/new_img6_back.jpg" alt="밀크 앤 페퍼 MONGO Hoody (몽고 후디)" class="back" />
+                  </div>
+                  <div class="text-group">
+                    <em class="title">MILK &amp; PEPPER</em>
+                    <p class="description">
+                      밀크 앤 페퍼 MONGO Hoody (몽고 후디)
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-prev">
+              <span class="material-icons">
+                arrow_back
+              </span>
+            </div>
+            <div class="swiper-next">
+              <span class="material-icons">
+                arrow_forward
+              </span>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <ul class="main-new__menu product__menu mobile">
+            <li class="movement to-top delay-0">
+              <a href="#">
+                <div class="image">
+                  <img src="./img/new_img1.jpg" alt="밀크 앤 페퍼 ARTIMON Hoody (아티멍 후디)" class="front" />
+                  <img src="./img/new_img1_back.jpg" alt="밀크 앤 페퍼 ARTIMON Hoody (아티멍 후디)" class="back" />
+                </div>
+                <div class="text-group">
+                  <em class="title">MILK &amp; PEPPER</em>
+                  <p class="description">
+                    밀크 앤 페퍼 ARTIMON Hoody (아티멍 후디)
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="movement to-top delay-0">
+              <a href="#">
+                <div class="image">
+                  <img src="./img/new_img2.png"
+                    alt="맥스본 Christian Cowan x max-bone Jumper(크리스찬 코완 x 맥스본 점퍼) Hot Pink (핫핑크)" class="front" />
+                  <img src="./img/new_img2_back.png"
+                    alt="맥스본 Christian Cowan x max-bone Jumper(크리스찬 코완 x 맥스본 점퍼) Hot Pink (핫핑크)" class="back" />
+                </div>
+                <div class="text-group">
+                  <em class="title">MAXBONE</em>
+                  <p class="description">
+                    맥스본 Christian Cowan x max-bone Jumper(크리스찬 코완 x 맥스본 점퍼)
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="movement to-top delay-1">
+              <a href="#">
+                <div class="image">
+                  <img src="./img/new_img3.jpg" alt="맥스본 Tai Knit Jumper (타이 니트 점퍼) Taupe (토프)" class="front" />
+                  <img src="./img/new_img3_back.jpg" alt="맥스본 Tai Knit Jumper (타이 니트 점퍼) Taupe (토프)" class="back" />
+                </div>
+                <div class="text-group">
+                  <em class="title">MAXBONE</em>
+                  <p class="description">
+                    맥스본 Tai Knit Jumper (타이 니트 점퍼) Taupe (토프)
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="movement to-top delay-1">
+              <a href="#">
+                <div class="image">
+                  <img src="./img/new_img4.jpg" alt="밀크 앤 페퍼 ROOKIE Hoody (루키 후디)" class="front" />
+                  <img src="./img/new_img4_back.jpg" alt="밀크 앤 페퍼 ROOKIE Hoody (루키 후디)" class="back" />
+                </div>
+                <div class="text-group">
+                  <em class="title">MILK &amp; PEPPER</em>
+                  <p class="description">
+                    밀크 앤 페퍼 ROOKIE Hoody (루키 후디)
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="movement to-top delay-2">
+              <a href="#">
+                <div class="image">
+                  <img src="./img/new_img5.jpg" alt="펫 소 시크 Warm so chic(패딩 자켓) – Red(레드)" class="front" />
+                  <img src="./img/new_img5_back.jpg" alt="펫 소 시크 Warm so chic(패딩 자켓) – Red(레드)" class="back" />
+                </div>
+                <div class="text-group">
+                  <em class="title">PET SO CHIC</em>
+                  <p class="description">
+                    펫 소 시크 Warm so chic(패딩 자켓) – Red(레드)
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="movement to-top delay-2">
+              <a href="#">
+                <div class="image">
+                  <img src="./img/new_img6.jpg" alt="밀크 앤 페퍼 MONGO Hoody (몽고 후디)" class="front" />
+                  <img src="./img/new_img6_back.jpg" alt="밀크 앤 페퍼 MONGO Hoody (몽고 후디)" class="back" />
+                </div>
+                <div class="text-group">
+                  <em class="title">MILK &amp; PEPPER</em>
+                  <p class="description">
+                    밀크 앤 페퍼 MONGO Hoody (몽고 후디)
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- SLOGAN -->
+      <section class="main-slogan slogan">
+        <h2 class="hide">꼬띠샵 슬로건</h2>
+        <div class="text-group">
+          <span>PET SO CHIC</span>
+          <span>MAXBONE</span>
+          <span>MILK &amp; PEPPER</span>
+          <span>PET SO CHIC</span>
+          <span>MAXBONE</span>
+          <span>MILK &amp; PEPPER</span>
+          <span>PET SO CHIC</span>
+          <span>MAXBONE</span>
+          <span>MILK &amp; PEPPER</span>
+          <span>PET SO CHIC</span>
+          <span>MAXBONE</span>
+          <span>MILK &amp; PEPPER</span>
+        </div>
+      </section>
+      <!-- COTIELOG -->
+      <section class="main-cotielog scroll-spy">
+        <h2 class="hide">꼬띠샵 소식지</h2>
+        <div class="inner">
+          <h3>Cotielog</h3>
+          <ul class="main-cotielog__menu">
+            <li class="movement to-top delay-0">
+              <a href="#">
+                <div class="poster">
+                  <img src="./img/cotielog_img1.jpg" alt="오프라인 입점 매장 안내" />
+                </div>
+                <em class="title">오프라인 입점 매장 안내</em>
+              </a>
+            </li>
+            <li class="movement to-top delay-1">
+              <a href="#">
+                <div class="poster">
+                  <img src="./img/cotielog_img2.png" alt="2021 GDWEB 디자인 어워즈 WINNER PRIZE 수상" />
+                </div>
+                <em class="title">2021 GDWEB 디자인 어워즈 WINNER PRIZE 수상</em>
+              </a>
+            </li>
+            <li class="movement to-top delay-2">
+              <a href="#">
+                <div class="poster">
+                  <img src="./img/cotielog_img3.jpg" alt="꼬띠샵은 친환경 포장재를 사용합니다." />
+                </div>
+                <em class="title">꼬띠샵은 친환경 포장재를 사용합니다.</em>
+              </a>
+            </li>
+            <li class="movement to-top delay-3">
+              <a href="#">
+                <div class="poster">
+                  <img src="./img/cotielog_img4.png" alt="2021.09 우수 리뷰 고객 캐리커쳐" />
+                </div>
+                <em class="title">2021.09 우수 리뷰 고객 캐리커쳐</em>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="btn">
+            <i class="fas fa-plus"></i><span>more</span>
+          </a>
+        </div>
+      </section>
+      <!-- INSTAGRAM -->
+      <section class="main-instagram">
+        <h2 class="hide">꼬띠샵 인스타그램</h2>
+        <div class="inner">
+          <h3>Instagram<br class="only-m" />@cotie_shop</h3>
+          <ul class="main-instagram__menu pc">
+            <li>
+              <a href="https://www.instagram.com/p/CVMtYWjLMgr/" target="_blank">
+                <img src="./img/insta_img1.jpg" alt="Christian Cowan x max-bone Jumper Hot Pink" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/p/CU63Ah-rbVo/" target="_blank">
+                <img src="./img/insta_img2.jpg" alt="Cotie IDOL Hoody" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/p/CU62KBUr7wn/" target="_blank">
+                <img src="./img/insta_img3.jpg" alt="Cotie Tiny dog collar - Big Bone" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/p/CU608F8repK/" target="_blank">
+                <img src="./img/insta_img4.jpg" alt="Cotie Mb Eats Food Scoop & Bag Clip" />
+              </a>
+            </li>
+          </ul>
+          <ul class="main-instagram__menu mobile">
+            <li>
+              <a href="https://www.instagram.com/p/CVMuc1cLUJf/" target="_blank">
+                <img src="./img/insta_img1_m.jpg" alt="Fiber bamboo bowl 뱀부 식기" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/p/CVMuMI9rSfr/" target="_blank">
+                <img src="./img/insta_img2_m.jpg" alt="케이펫페어 일산 무료 초청권 이벤트" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/p/CVMtYWjLMgr/" target="_blank">
+                <img src="./img/insta_img3_m.jpg" alt="Christian Cowan x max-bone Jumper Hot Pink" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/p/CU63Ah-rbVo/" target="_blank">
+                <img src="./img/insta_img4_m.jpg" alt="IDOL Hoody 아이돌 후디" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer__layer"></div>
+      <div class="inner">
+        <div class="row">
+          <ul class="footer__menu">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Buy Shop</a></li>
+          </ul>
+          <ul class="footer__links">
+            <li>
+              <a href="https://www.facebook.com/cotieshop.co.kr/" target="_blank">
+                <span class="pc">facebook</span>
+                <i class="fab fa-facebook-f mobile"><span>facebook</span></i>
+              </a>
+            </li>
+            <li><a href="https://www.instagram.com/cotie_shop/" target="_blank">
+                <span class="pc">instagram</span>
+                <i class="fab fa-instagram mobile"><span>instagram</span></i>
+              </a>
+            </li>
+            <li><a href="https://accounts.kakao.com/login?continue=http%3A%2F%2Fpf.kakao.com%2F_ivZMs%2Fchat"
+                target="_blank"><i class="fas fa-comment"></i></a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="info">
+            <a href="#">
+              <span>Cotieshop</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div>
+              <div class="wrap">
+                <span>
+                  주식회사 델핀 서울특별시 용산구 우사단로2길 1, 3층 대표 : 신승호 사업자 등록번호 : 113-86-83830
+                </span>
+                <address>
+                  04413 서울특별시 용산구 우사단로2길 1 (보광동) TEL : 02-2678-3096~7 FAX : 02-2678-3099
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <p class="copyright">
+            Copyright <span class="this-year"></span>. Cotieshop All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- TO TOP BUTTON -->
+    <a href="#" id="to-top">
+      <i class="fas fa-chevron-up"></i>
+      <span>top</span>
+      <div class="to-top-punch">
+        <img src="./img/to_top_scratch1.svg" alt="" class="scratch1" />
+        <img src="./img/to_top_scratch2.svg" alt="" class="scratch2" />
+        <img src="./img/punch1.svg" alt="" class="punch" />
+      </div>
+    </a>
+  </div>
+
+
+  <script>
+    'use strict';
+
+    // header영역
+    var header = document.querySelector('#header');
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 0) {
+        header.classList.add('active');
+      } else {
+        header.classList.remove('active');
+      }
+    });
+
+    // gnb영역
+    $('#gnb > ul > li > a').on('mouseenter focusin', function () {
+      if ($(window).width() >= 1024) {
+        var index = $('#gnb > ul > li').index($(this).parent());
+        $('#gnb > ul > li').removeClass('on');
+        $('#gnb > ul > li:eq(' + index + ')').addClass('on');
+      }
+    });
+
+    $('#header').on('mouseleave', function () {
+      $('#gnb > ul > li').removeClass('on');
+    });
+
+    setCurrentNav();
+
+    function setCurrentNav() {
+      var bodyClass = $('body').attr('class');
+      var splitClass = bodyClass.split(' ');
+      if (splitClass[0] === 'main') {
+        return false;
+      }
+
+      $('#gnb > ul > li').each(function (i) {
+        if ($(this).attr('data-link') === splitClass[1]) {
+          $(this).addClass('selected');
+        }
+      });
+
+      $('#gnb > ul > li.selected > .sub-menu > li').each(function (i) {
+        if (splitClass[2] === undefined || splitClass[2] === null) {
+          return false;
+        }
+        if ($(this).attr('data-menu') === splitClass[2]) {
+          $(this).addClass('selected');
+        }
+      });
+    }
+
+    // 검색창 toggle
+    $('#header .top-menu li:eq(0) a').on('click', function () {
+      $('.search-modal__wrap').removeClass('invisible');
+      enable();
+    });
+
+    $('.search-modal__header .close-btn').on('click', function () {
+      $('.search-modal__wrap').addClass('invisible');
+      disable();
+    });
+
+    // 모바일 메뉴
+    $('#header .menu-btn').on('click', function () {
+      $(this).addClass('invisible');
+      $('#header .close-btn').removeClass('invisible');
+      $('#gnb').addClass('open');
+      $('#gnb > ul > li.active > a').trigger('click');
+      enable();
+    });
+
+    $('#header .close-btn').on('click', function () {
+      $(this).addClass('invisible');
+      $('#header .menu-btn').removeClass('invisible');
+      $('#gnb').removeClass('open');
+      $('#gnb > ul > li.selected > a').trigger('click');
+      disable();
+    });
+
+    $('#gnb > ul > li > a').on('click focusin', function (event) {
+      if ($(window).width() < 1024) {
+        if ($(this).parent().find('ul').length > 0) {
+          event.preventDefault();
+        }
+        var index = $('#gnb > ul > li').index($(this).parent());
+        $('#gnb > ul > li').removeClass('selected');
+        $('#gnb > ul > li:eq(' + index + ')').addClass('selected');
+      }
+    });
+
+    $(window).on('resize', function () {
+      if ($(window).width() >= 1024) {
+        if ($('#gnb').hasClass('open') === true) {
+          disable();
+        }
+      } else if ($('#gnb').hasClass('open') === true) {
+        $('#header .menu-btn').trigger('click');
+      }
+    });
+
+    // 올해년도 구하기
+    var thisYear = document.querySelector('.this-year');
+    thisYear.textContent = new Date().getFullYear();
+
+    // footer info toggle
+    var footerInfo = document.querySelector('#footer .info');
+    var footerToggleBtn = footerInfo.querySelector('a');
+    footerToggleBtn.addEventListener('click', function () {
+      footerInfo.classList.toggle('open');
+      if (footerInfo.classList.contains('open')) {
+        var height = 0;
+        height = $('#footer .info > div > .wrap').outerHeight(true);
+        $('#footer .info').find('> div').css({
+          'height': height + 'px'
+        });
+      } else {
+        $('#footer .info').find('> div').css({
+          'height': '0px'
+        });
+      }
+    });
+
+    var footer = document.querySelector('#footer');
+    var footerHeight = footer.getBoundingClientRect().height;
+    var toTopBtn = document.querySelector('#to-top');
+    var wrapper = document.querySelector('#wrapper');
+
+    window.addEventListener('scroll', _.throttle(function () {
+      if (window.pageYOffset > 500) {
+        gsap.to(toTopBtn, .2, {
+          x: 0
+        });
+      } else {
+        gsap.to(toTopBtn, .2, {
+          x: 100
+        })
+      }
+    }, 300));
+
+    toTopBtn.addEventListener('click', function () {
+      wrapper.scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
+    changeImg();
+
+    function changeImg() {
+      var imgEl = toTopBtn.querySelector('img.punch');
+      var imgUrl = ['punch1.svg', 'punch2.svg', 'punch3.svg', 'punch4.svg'];
+      var chosenImgUrl = imgUrl[Math.floor(Math.random() * imgUrl.length)];
+
+      imgEl.setAttribute('src', `https://jeon-hyerin.github.io/cotieshop/img/${chosenImgUrl}`);
+    }
+  </script>
+
+</body>
+</html>

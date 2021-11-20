@@ -38,8 +38,8 @@
           <ul>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">SKILLS</a></li>
-            <li><a href="#">PRACTICAL PUBLISHING</a></li>
             <li><a href="#">WEB PUBLISHING</a></li>
+            <li><a href="#">PRACTICAL PUBLISHING</a></li>
           </ul>
         </nav>
       </div>
@@ -157,12 +157,12 @@
         <div class="inner">
           <h3>WEB PUBLISHING</h3>
           <ul class="main-web__menu">
-            <li><a href="#">Jejubeer</a></li>
-            <li><a href="#">Cotieshop</a></li>
-            <li><a href="#">Outback</a></li>
-            <li><a href="#">Wisewedding</a></li>
+            <li class="selected" data-link="jejubeer"><a href="#">Jejubeer</a></li>
+            <li data-link="cotieshop"><a href="#">Cotieshop</a></li>
+            <li data-link="outback"><a href="#">Outback</a></li>
+            <li data-link="wisewedding"><a href="#">Wisewedding</a></li>
           </ul>
-          <div class="main-web__contents jejubeer" data-filter="jejubeer">
+          <div class="main-web__contents jejubeer visible" data-filter="jejubeer">
             <img src="./img/web/jejubeer/jejuber_logo.png" alt="JEJU BEER COMPANY" />
             <div class="text-group">
               <div class="summary">
@@ -193,12 +193,51 @@
                 </div>
               </div>
               <div class="view">
-                <a href="./portfolio/website-works/01/index.html" class="btn pc-ver" data-featherlight="iframe">PC version</a>
-                <a href="./portfolio/website-works/01/html/mobile-portfolio-01.html" class="btn m-ver" data-featherlight="iframe">Mobile version</a>
+                <a href="./portfolio/website-works/01/index.html" class="btn" data-featherlight="iframe">PC version</a>
+                <a href="./portfolio/website-works/01/html/mobile-portfolio-01.html" class="btn" data-featherlight="iframe">Mobile version</a>
               </div>
             </div>
             <div class="image">
               <img src="./img/web/jejubeer/jejubeer.jpg" alt="Jejubeer" />
+            </div>
+          </div>
+          <div class="main-web__contents cotieshop" data-filter="cotieshop">
+            <img src="./img/web/cotieshop/cotieshop_logo.svg" alt="Cotieshop" />
+            <div class="text-group">
+              <div class="summary">
+                <em>프로젝트 개요</em>
+                <p class="description">
+                  페이지마다 다른 테마로 구성된 제주맥주 웹사이트에 매력을 느껴 모든 서브 페이지를 제작하였습니다. 모바일 내비게이션은 사용자가 좀 더 직관적으로 알아볼 수 있도록 약간의 리 디자인을 진행하였습니다. floating action button에서 문의하기 모달창은 제주맥주 대표색채로 재작업하였으며, 키보드 사용자를 위해 키보드 접근성도 고려하여 제작하였습니다. 또한 SNS 연동까지 완료함으로써 실제 웹사이트처럼 원하는 정보를 획득할 수 있습니다.
+                </p>
+              </div>
+              <div class="period">
+                <em>작업 기간</em>
+                <p class="description">2021.09.07 ~ 2021.09.30 (약 3주 소요)</p>
+              </div>
+              <div class="participation">
+                <em>작업 참여도</em>
+                <p class="description">100% 개인 작업</p>
+              </div>
+              <div class="method">
+                <em>제작 방식</em>
+                <div class="table">
+                  <div class="row">
+                    <span class="cell">Publishing</span>
+                    <span class="cell">HTML + CSS + JAVASCRIPT + JQUERY</span>
+                  </div>
+                  <div class="row">
+                    <span class="cell">Library</span>
+                    <span class="cell">Swiper Slide, ScrollMagic</span>
+                  </div>                  
+                </div>
+              </div>
+              <div class="view">
+                <a href="./portfolio/website-works/02/index.html" class="btn" data-featherlight="iframe">PC version</a>
+                <a href="./portfolio/website-works/02/html/mobile-portfolio-01.html" class="btn" data-featherlight="iframe">Mobile version</a>
+              </div>
+            </div>
+            <div class="image">
+              <img src="./img/web/cotieshop/cotieshop.jpg" alt="Cotieshop" />
             </div>
           </div>
         </div>
@@ -207,7 +246,13 @@
   </div>
 
   <script>
-    // header color and height change
+    'use strict';
+    // 해시태그 기본값 막기
+    $(document).on('click', 'a[href="#"]', function (e) {
+      e.preventDefault();
+    });
+
+    // 헤더영역 스크롤 이벤트 추가
     const header = document.querySelector('#header');
 
     window.addEventListener('scroll', function () {
@@ -216,6 +261,30 @@
       } else {
         header.classList.remove('minimize');
       }
+    });
+
+    // 웹 퍼블리싱 섹션 탭메뉴 제어
+    const webMenuEls = document.querySelectorAll('.main-web__menu li');
+    webMenuEls.forEach(function (webMenuEl) {
+      webMenuEl.addEventListener('click', function (e) {
+        const link = e.target.dataset.link || e.target.parentElement.dataset.link;
+        const webContents = document.querySelectorAll('.main-web__contents');
+        const selected = document.querySelector('.main-web__menu li.selected');
+        if (link === undefined) {
+          return false;
+        } 
+        webContents.forEach(function (webContent) {
+          if (link === webContent.dataset.filter) {
+            webContent.classList.add('visible');
+          } else {
+            webContent.classList.remove('visible');
+          }
+        });
+        if (selected !== null) {
+          selected.classList.remove('selected');
+        } 
+        e.target.parentElement.classList.add('selected');
+      });
     });
   </script>
 
