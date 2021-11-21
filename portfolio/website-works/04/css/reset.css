@@ -1,0 +1,142 @@
+/*  Google Fonts - Noto Serif KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap');
+
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  background-color: #fff;
+  color: #222;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+  font-size: 1em;
+  line-height: normal;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, button {
+  margin: 0; 
+  padding: 0;
+}
+
+address, em, i, cite {
+  font-style: normal;
+}
+
+em,
+strong {
+  font-weight: 700;
+}
+
+button,
+.btn {
+  display: inline-block;
+  border: none;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+i[class^="fa"] span {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  position: absolute;
+  left: -9999px;
+}
+
+#skip-nav {
+  position: fixed;
+  left: 0;
+  top: -40px;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  font-size: 16px;
+  z-index: 100;
+  transition: .3s;
+}
+
+#skip-nav:focus {
+  top: 0;
+}
+
+/* SLIDE */
+.image-slide {
+  position: relative;
+}
+
+.image-slide .slide-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-slide .slide-menu .slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#btn-menu {
+  position: fixed;
+  right: 15px;
+  top: 130px;
+  z-index: 100;
+}
+
+#btn-menu li + li {
+  margin-top: 10px;
+}
+
+#btn-menu li a {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid #333;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #333;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 3px rgb(0 0 0 / 30%);
+  transition: .3s;
+}
+
+#btn-menu li.selected a {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+#btn-menu li:hover a {
+  color: #f5f5f5;
+  background-color: #333;
+}

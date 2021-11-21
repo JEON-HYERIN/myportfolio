@@ -305,6 +305,12 @@ section.main-skills .inner {
   background-color: #343436;
 }
 
+.main-web__contents.wisewedding > img {
+  width: 120px;
+  padding: 8px;
+  background-color: #fff;
+}
+
 .main-web__contents > div {
   display: inline-block;
   vertical-align: top;
@@ -390,6 +396,16 @@ section.main-skills .inner {
 .main-web__contents.outback .view .btn:hover {
   color: #fff;
   background-color: #b10a11;
+}
+.main-web__contents.wisewedding .view .btn {
+  border-color: #000;
+  color: #000;
+  background-color: #fff;
+}
+.main-web__contents.wisewedding .view .btn:hover {
+  border-color: #bf8365;
+  color: #fff;
+  background-color: #bf8365;
 }
 
 .main-web__contents .view .btn + .btn {
