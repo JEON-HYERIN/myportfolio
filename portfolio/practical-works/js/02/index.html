@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 슬라이드</title>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/254318af28.js" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- JS -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  
+  <div id="wrapper">
+    <div class="inner">
+      <div class="image-slide">
+        <div class="wrap">
+          <p><img src="./img/image-slide-01.jpg" alt="" /></p>
+          <ul class="slide">
+            <li><a href="#"><img src="./img/image-slide-01.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="./img/image-slide-02.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="./img/image-slide-03.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="./img/image-slide-04.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="./img/image-slide-05.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="./img/image-slide-06.jpg" alt="" /></a></li>
+          </ul>
+        </div>
+        <ul class="indicator">
+        </ul>
+        <p class="control">
+          <a href="#" class="prev"><img alt="이전" src="./img/btn-left.png" /></a>
+          <a href="#" class="next"><img alt="다음" src="./img/btn-right.png" /></a>
+          <a href="#" class="play">
+            <i class="fas fa-play"><span>타이머 시작</span></i>
+            <i class="fas fa-pause"><span>타이머 정지</span></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  'use strict';
+
+  // 해시태그 기본값 막기
+  $(document).on('click', 'a[href="#"]', function (e) {
+    e.preventDefault();
+  });
+
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+
+  setImageSlide('div.image-slide:eq(0)', 1, true, 3000);
+
+  function setImageSlide (selector, first, status, speed) {
+    var numSlide = $(selector).find('.slide li').length;
+    var slideNow = 0;
+    var slidePrev = 0;
+    var slideNext = 0;
+    var slideFirst = first;
+    var timerId = '';
+    var timerSpeed = speed;
+    var isTimerOn = status;
+
+    // 슬라이드 개수 만큼 인디케이터 생성
+    $(selector).find('.slide li').each(function (i) {
+      $(this).css({
+        'left': (i * 100) + '%', 
+        'display': 'block'
+      });
+      $(selector).find('.indicator').append('<li><a href="#">' + (i + 1) + '번 슬라이드</a></li>\n');
+    });
+
+    // 타이머 켜져 있다면 키고 반대라면 끄기
+    if (isTimerOn === true) {
+      $(selector).find('a.play').addClass('on');
+    } else {
+      $(selector).find('a.play').removeClass('on');
+    }
+
+    //슬라이드 시작
+    showSlide(slideFirst); 
+    
+    // 인디케이터 클릭하면 해당 슬라이드 보여주기
+    $(selector).find('.indicator li a').on('click', function() {
+      var index = $(selector).find('.indicator li').index($(this).parent());
+      showSlide(index + 1);
+    });
+
+    $(selector).find('a.prev').on('click', function() {
+      showSlide(slidePrev);
+    });
+
+    $(selector).find('a.next').on('click', function() {
+      showSlide(slideNext);
+    });
+
+    $(selector).find('a.play').on('click', function() {
+      if (isTimerOn === true) {
+        clearTimeout(timerId);
+        $(this).removeClass('on');
+        isTimerOn = false;
+      } else {
+        timerId = setTimeout(function () {
+        showSlide(slideNext);
+      }, timerSpeed);
+      $(this).addClass('on');
+      isTimerOn = true;
+      }
+    });
+
+    function showSlide(n) {
+      // 첫번째 슬라이드일 경우 transition 없애기
+      if(slideNow === 0) {
+        $(selector).find('.slide').css({
+        'transition': 'none',
+        'left': -((n - 1) * 100) + '%'
+      });  
+      } else {
+        $(selector).find('.slide').css({
+        'transition': 'left .3s',
+        'left': -((n - 1) * 100) + '%'
+      });
+      }
+      $(selector).find('.indicator li').removeClass('on');
+      $(selector).find('.indicator li:eq(' + (n - 1) + ')').addClass('on');
+      slideNow = n;
+      slidePrev = (n === 1) ? numSlide : (n - 1);
+      slideNext = (n === numSlide) ? 1 : (n + 1);
+      
+      if (isTimerOn === true) {
+        clearTimeout(timerId);
+        timerId = setTimeout(function () {
+        showSlide(slideNext);
+      }, timerSpeed);
+      }
+    }
+  }
+  </script>
+</body>
+</html>

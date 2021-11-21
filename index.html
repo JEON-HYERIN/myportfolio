@@ -414,6 +414,35 @@
               </a>
             </div>
           </div>
+          <div class="main-practical__contents" data-filter="js">
+            <div>
+              <a href="./portfolio/practical-works/js/01/index.html" data-featherlight="iframe">
+                <img src="./img/practical/js/1.png" alt="" />
+                <div class="title">
+                  <span>To DO LIST</span>
+                  <span>#HTML #CSS #JAVASCRIPT</span>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="./portfolio/practical-works/js/02/index.html" data-featherlight="iframe">
+                <img src="./img/practical/js/2.png" alt="" />
+                <div class="title">
+                  <span>IMAGE SLIDE</span>
+                  <span>#HTML #CSS #JQUERY</span>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="./portfolio/practical-works/js/03/index.html" data-featherlight="iframe">
+                <img src="./img/practical/js/3.PNG" alt="" />
+                <div class="title">
+                  <span>MOUSEWHEEL UI</span>
+                  <span>#HTML #CSS #JQUERY</span>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -431,6 +460,10 @@
   $(document).on('click', 'a[href="#"]', function (e) {
     e.preventDefault();
   });
+
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
 
   // 헤더영역 스크롤 이벤트 추가
   const header = document.querySelector('#header');

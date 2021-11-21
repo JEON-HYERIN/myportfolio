@@ -1,0 +1,169 @@
+/* COMMON */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #e0e0e0;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+ul, li {
+  list-style: none;
+}
+
+input[type="text"], button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+input[type="text"] {
+  border-bottom: 2px solid #e0e0e0;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SECTION */
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.clock em {
+  display: block;
+  font-style: normal;
+  font-size: 180px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.login {
+  margin-bottom: 30px;
+}
+
+.login input[type="text"] {
+  font-size: 36px;
+  color: #e0e0e0;
+}
+
+.login input[type="text"]::placeholder {
+  color: #bdbdbd;
+}
+
+h1.username {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.todo input[type="text"] {
+  font-size: 22px;
+  color: #e0e0e0;
+}
+
+.todo input[type="text"]::placeholder {
+  font-size: 22px;
+  color: #e0e0e0;
+}
+
+ul.todo__menu {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+ul.todo__menu li {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4em;
+  color: #bdbdbd;
+}
+
+ul.todo__menu li button {
+  font-size: 22px;
+  color: #e0e0e0;
+  cursor: pointer;
+  padding-left: 8px;
+}
+
+.quotes {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.weather {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.weather .temp {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.weather .condition {
+  font-size: 14px;
+  color: #bdbdbd;
+}
+
+.weather .city {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
+  
+  #main {
+    padding: 70px 20px 20px;
+  }
+
+  .clock em {
+    font-size: 100px;
+  }
+
+  .quotes {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
+  .weather {
+    top: 0;
+    right: 5px;
+  }
+}
