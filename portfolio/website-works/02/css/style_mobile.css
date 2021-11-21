@@ -1490,6 +1490,11 @@ body.brands p.description {
   opacity: 0;
 }
 
+/* BTN MENU */
+#btn-menu {
+  display: none !important;
+}
+
 
 /* 미디어쿼리 */
 @media screen and (min-width: 768px) {

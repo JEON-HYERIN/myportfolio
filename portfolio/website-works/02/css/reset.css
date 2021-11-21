@@ -120,3 +120,39 @@ i[class^="fa"] span {
 .show .movement.to-top.delay-4 {
   transition-delay: 1.2s;
 }
+
+#btn-menu {
+  position: fixed;
+  right: 15px;
+  top: 130px;
+  z-index: 100;
+}
+
+#btn-menu li + li {
+  margin-top: 10px;
+}
+
+#btn-menu li a {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid #333;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #333;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 3px rgb(0 0 0 / 30%);
+  transition: .3s;
+}
+
+#btn-menu li.selected a {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+#btn-menu li:hover a {
+  color: #f5f5f5;
+  background-color: #333;
+}

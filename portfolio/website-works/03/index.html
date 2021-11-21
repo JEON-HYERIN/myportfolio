@@ -516,6 +516,27 @@
     <a href="#" id="to-top" class="invisible">
       <img src="./img/btn_top.gif" alt="top" />
     </a>
+    <!-- BTN MENU -->
+    <ul id="btn-menu">
+      <li class="selected" data-link="main">
+        <a href="./index.html">Main</a>
+      </li>
+      <li data-link="sub-outback">
+        <a href="./html/outbackStory.html">View #01</a>
+      </li>
+      <li data-link="sub-beef">
+        <a href="./html/beefStory.html">View #02</a>
+      </li>
+      <li data-link="sub-product">
+        <a href="./html/product.html">View #03</a>
+      </li>
+      <li data-link="sub-membership">
+        <a href="./html/membership.html">View #04</a>
+      </li>
+      <li data-link="sub-benefit">
+        <a href="./html/benefit.html">View #05</a>
+      </li>
+    </ul>
   </div>
 
   <script>
@@ -646,6 +667,21 @@
         closeBtn.classList.add('hidden');
       });
     }
+
+  setCurrentNav();
+  // now navigation
+  function setCurrentNav() {
+    var bodyClass = $('body').attr('class');
+    var classArray = bodyClass.split(' ');
+    if (classArray[0] === 'main') return false;
+    $('#btn-menu li').each(function () {
+      if ($(this).attr('data-link') === classArray[2]) {
+        $(this).addClass('selected');
+      } else {
+        $(this).removeClass('selected');
+      }
+    });
+  }
   </script>
 
 </body>

@@ -628,6 +628,30 @@
         <img src="./img/punch1.svg" alt="" class="punch" />
       </div>
     </a>
+    <!-- BTN MENU -->
+    <ul id="btn-menu">
+      <li class="selected" data-link="main">
+        <a href="./index.html">Main</a>
+      </li>
+      <li data-link="brands">
+        <a href="./html/brands.html">View #01</a>
+      </li>
+      <li data-link="outdoor">
+        <a href="./html/outdoor.html">View #02</a>
+      </li>
+      <li data-link="indoor">
+        <a href="./html/indoor.html">View #03</a>
+      </li>
+      <li data-link="cotielog">
+        <a href="./html/cotielog.html">View #04</a>
+      </li>
+      <li data-link="store">
+        <a href="./html/store.html">View #05</a>
+      </li>
+      <li data-link="search">
+        <a href="./html/search.html">View Modal</a>
+      </li>
+    </ul>
   </div>
 
 
@@ -657,31 +681,6 @@
     $('#header').on('mouseleave', function () {
       $('#gnb > ul > li').removeClass('on');
     });
-
-    setCurrentNav();
-
-    function setCurrentNav() {
-      var bodyClass = $('body').attr('class');
-      var splitClass = bodyClass.split(' ');
-      if (splitClass[0] === 'main') {
-        return false;
-      }
-
-      $('#gnb > ul > li').each(function (i) {
-        if ($(this).attr('data-link') === splitClass[1]) {
-          $(this).addClass('selected');
-        }
-      });
-
-      $('#gnb > ul > li.selected > .sub-menu > li').each(function (i) {
-        if (splitClass[2] === undefined || splitClass[2] === null) {
-          return false;
-        }
-        if ($(this).attr('data-menu') === splitClass[2]) {
-          $(this).addClass('selected');
-        }
-      });
-    }
 
     // 검색창 toggle
     $('#header .top-menu li:eq(0) a').on('click', function () {
@@ -786,6 +785,21 @@
 
       imgEl.setAttribute('src', `https://jeon-hyerin.github.io/cotieshop/img/${chosenImgUrl}`);
     }
+
+  setCurrentNav();
+  // now navigation
+  function setCurrentNav() {
+    var bodyClass = $('body').attr('class');
+    var classArray = bodyClass.split(' ');
+    if (classArray[0] === 'main') return false;
+    $('#btn-menu li').each(function () {
+      if ($(this).attr('data-link') === classArray[1]) {
+        $(this).addClass('selected');
+      } else {
+        $(this).removeClass('selected');
+      }
+    });
+  }
   </script>
 
 </body>

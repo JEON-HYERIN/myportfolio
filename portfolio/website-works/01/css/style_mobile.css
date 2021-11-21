@@ -1897,8 +1897,10 @@ section.promotion .inner {
   font-weight: 400;
 }
 
-
-
+/* BTN MENU */
+#btn-menu {
+  display: none !important;
+}
 
 /* 미디어쿼리  Tablet*/
 @media screen and (min-width: 768.0px) and (max-width: 1023.9px) {

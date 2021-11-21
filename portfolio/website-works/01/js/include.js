@@ -139,3 +139,21 @@ $('.modal-include').load('../include/modal.html', function () {
     });
   }
 });
+
+// btn menu selected
+$('.btn-menu-include').load('../include/btn-menu.html', function () {
+  setCurrentNav();
+  // now navigation
+  function setCurrentNav() {
+    var bodyClass = $('body').attr('class');
+    var classArray = bodyClass.split(' ');
+    if (classArray[0] === 'main') return false;
+    $('#btn-menu li').each(function () {
+      if ($(this).attr('data-link') === classArray[0]) {
+        $(this).addClass('selected');
+      } else {
+        $(this).removeClass('selected');
+      }
+    });
+  }
+})

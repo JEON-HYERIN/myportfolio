@@ -1615,6 +1615,11 @@ body.main .service-menu li.delivery a .icon.mobile {
   background-color: #fff;
 }
 
+/* BTN MENU */
+#btn-menu {
+  display: none !important;
+}
+
 
 /* 미디어쿼리 */
 @media screen and (min-width: 320px) and (max-width: 767px) {

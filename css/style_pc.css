@@ -23,7 +23,7 @@ br.only-m {
 }
 
 section:not(.main-visual) .inner {
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 h3 {
@@ -138,7 +138,6 @@ p.description {
 }
 
 section.main-about .inner {
-  padding: 150px 0;
   overflow: hidden;
 }
 
@@ -154,13 +153,14 @@ section.main-about .inner {
 
 .main-about .title {
   margin-bottom: 50px;
-  font-size: 65px;
+  font-size: 68px;
   font-weight: 700;
   text-align: left;
   color: #264B57;
 }
 
 .main-about .description {
+  font-size: 17px;
   color: #212121;
 }
 
@@ -208,6 +208,10 @@ section.main-about .inner {
 /* SKILLS */
 .main-skills {
   background-color: #e0e0e0;
+}
+
+section.main-skills .inner {
+  padding-bottom: 50px;
 }
 
 .main-skills__menu li {
