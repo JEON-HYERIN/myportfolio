@@ -271,18 +271,19 @@ section.main-about .inner {
   margin-left: 8px;
 }
 
-.main-web__menu li.selected {
-  border-radius: 6px;
-  color: #fff;
-  background-color: #264B57;
-}
-
 .main-web__menu li a {
   display: block;
   font-size: 20px;
   font-weight: 300;
   padding: 8px 12px;
 }
+
+.main-web__menu li.selected a {
+  border-radius: 6px;
+  color: #fff;
+  background-color: #264B57;
+}
+
 .main-web__contents {
   display: none;
 }
@@ -296,6 +297,7 @@ section.main-about .inner {
 }
 
 .main-web__contents.outback > img {
+  padding: 8px;
   background-color: #343436;
 }
 

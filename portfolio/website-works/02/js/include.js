@@ -142,7 +142,7 @@ $('.footer-include').load('../include/footer.html', function () {
   var wrapper = document.querySelector('#wrapper');
 
   window.addEventListener('scroll', _.throttle(function () {
-    if (window.pageYOffset > 500) {
+    if (window.pageYOffset > 200) {
       gsap.to(toTopBtn, .2, {
         x: 0
       });
