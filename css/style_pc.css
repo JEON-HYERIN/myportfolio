@@ -31,12 +31,13 @@ h3 {
   font-size: 50px;
   font-weight: 700;
   text-align: center;
-  color: #264B57;
+  color: #2C3A47;
 }
 
 p.description {
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.6em;
+  color: #212121;
 }
 
 /* HEADER */
@@ -156,16 +157,15 @@ section.main-about .inner {
   font-size: 68px;
   font-weight: 700;
   text-align: left;
-  color: #264B57;
+  color: #2C3A47;
 }
 
 .main-about .description {
   font-size: 17px;
-  color: #212121;
 }
 
 .main-about .description em {
-  color: #ad8c68;
+  color: #264B57;
 }
 
 .main-about .links {
@@ -207,7 +207,7 @@ section.main-about .inner {
 
 /* SKILLS */
 .main-skills {
-  background-color: #e0e0e0;
+  background-color: #f1f2f6;
 }
 
 section.main-skills .inner {
@@ -254,7 +254,6 @@ section.main-skills .inner {
 
 .main-skills__menu li .description {
   font-size: 15px;
-  color: #263238;
 }
 
 /* WEB PUBLISHING */
@@ -285,7 +284,7 @@ section.main-skills .inner {
 .main-web__menu li.selected a {
   border-radius: 6px;
   color: #fff;
-  background-color: #264B57;
+  background-color: #2C3A47;
 }
 
 .main-web__contents {
@@ -367,7 +366,7 @@ section.main-skills .inner {
 .main-web__contents .view .btn {
   display: inline-block;
   padding: 8px 12px;
-  border: 1px solid #546e7a;
+  border: 1px solid #2C3A47;
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 14px;
@@ -376,9 +375,10 @@ section.main-skills .inner {
 }
 
 .main-web__contents.jejubeer .view .btn {
-  background-color: #546e7a;
+  background-color: #2D4C7A;
 }
 .main-web__contents.jejubeer .view .btn:hover {
+  border-color: #1ecad3;
   color: #fff;
   background-color: #1ecad3;
 }
@@ -394,6 +394,7 @@ section.main-skills .inner {
   background-color: #343436;
 }
 .main-web__contents.outback .view .btn:hover {
+  border-color: #b10a11;
   color: #fff;
   background-color: #b10a11;
 }
@@ -419,21 +420,21 @@ section.main-skills .inner {
 
 /* PRACTICAL PUBLISHING */
 .main-practical {
-
+  background-color: #dfe4ea;
 }
 
 .main-practical .inner {
   overflow: hidden;
 }
-.main-practical h3 {}
-.main-practical__menu,
-.main-practical__contents {}
+
+.main-practical h3 {
+  margin-bottom: 100px;
+}
+
 .main-practical__menu {
   float: left;
   width: 15%;
 }
-
-.main-practical__menu li {}
 
 .main-practical__menu li + li {
   margin-top: 30px;
@@ -445,8 +446,19 @@ section.main-skills .inner {
   font-weight: 300;
 }
 
-.main-practical__menu li.selected a {
-  color: red;
+.main-practical__menu li a span {
+  position: relative;
+  pointer-events: none;
+}
+
+.main-practical__menu li.selected a span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: #2C3A47;
 }
 
 .main-practical__contents {
@@ -461,16 +473,16 @@ section.main-skills .inner {
 
 .main-practical__contents > div {
   display: inline-block;
-  width: calc(33.33% - 5px);
+  width: calc(33.33% - 10px);
+}
+
+.main-practical__contents > div + div {
+  margin-left: 8px;
 }
 
 .main-practical__contents a {
   position: relative;
   display: block;
-}
-
-.main-practical__contents a img {
-
 }
 
 .main-practical__contents .title {
