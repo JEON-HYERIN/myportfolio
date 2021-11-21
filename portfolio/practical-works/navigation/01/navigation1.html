@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/254318af28.js" crossorigin="anonymous"></script>
+  <title>오버한 메뉴 외 나머지 흐려지는 네비게이션</title>
+  <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      position: relative;
+      height: 100vh;
+      background-color: #5c6bc0;
+    }
+
+    ul {
+      position: absolute;
+      left: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    li + li {
+      margin-top: 15px;
+    }
+
+    ul li a {
+      position: relative;
+      display: block;
+      text-decoration: inherit;
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.5em;
+      color: #eee;
+      transition: .3s;
+    }
+
+    ul:hover li a {
+      opacity: .3;
+    }
+
+    ul li:hover a {
+      opacity: 1;
+    }
+
+    ul li a::before {
+      content: '\f105';
+      font-family: fontawesome;
+      margin-right: 10px;
+      line-height: normal;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    ul li:hover a::before {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="javascript:void(0)">New Arrivals</a></li>
+    <li><a href="javascript:void(0)">Summer Collection</a></li>
+    <li><a href="javascript:void(0)">Winter Collection</a></li>
+    <li><a href="javascript:void(0)">Special Offers</a></li>
+    <li><a href="javascript:void(0)">Trends</a></li>
+  </ul>
+</body>
+</html>

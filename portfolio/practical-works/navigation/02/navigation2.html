@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13) content attr을 활용한 텍스트 네비게이션</title>
+  <style>
+    /* Google Web Fonts */
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(180deg, #DCE35B, #45B649);
+    }
+    a {
+      text-decoration: inherit;
+      color: inherit;
+    }
+    .gnb {
+    background-color: #fff;
+    padding: 15px 15px 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+    }
+    .gnb a {
+      position: relative;
+      display: inline-block;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      color: #222;
+      overflow: hidden;
+    }
+    .gnb a::before,
+    .gnb a span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: .3s;
+    }
+    .gnb a::before {
+      content: attr(data-link);
+      top: 100%;
+      color: #45B649;
+    }
+    .gnb a:hover::before {
+      top: 0;
+    }
+    .gnb a span {
+      top: 0;
+    }
+    .gnb a:hover span {
+      top: -100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gnb">
+    <a href="javascript:void(0)" data-link="메일">
+      <span>메일</span>
+    </a>
+    <a href="javascript:void(0)" data-link="카페">
+      <span>카페</span>
+    </a>
+    <a href="javascript:void(0)" data-link="블로그">
+      <span>블로그</span>
+    </a>
+    <a href="javascript:void(0)" data-link="지식iN">
+      <span>지식iN</span>
+    </a>
+    <a href="javascript:void(0)" data-link="쇼핑">
+      <span>쇼핑</span>
+    </a>
+    <a href="javascript:void(0)" data-link="Pay">
+      <span>Pay</span>
+    </a>
+    <a href="javascript:void(0)" data-link="사전">
+      <span>사전</span>
+    </a>
+    <a href="javascript:void(0)" data-link="뉴스">
+      <span>뉴스</span>
+    </a>
+  </div>
+
+</body>
+</html>

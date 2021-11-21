@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNS 아이콘 애니메이션</title>
+  <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #eee;
+    }
+
+    .text-group {
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #fafafa;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .text-group div {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      border-width: 5px;
+      border-style: solid;
+      font-size: 35px;
+      font-weight: 500;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .text-group div + div {
+      margin-left: 8px;
+    }
+
+    .text-group div.blue {
+      border-color: #4285f4;
+    }
+
+    .text-group div.red {
+      border-color: #ea4335;
+    }
+
+    .text-group div.yellow {
+      border-color: #fbbc05;
+    }
+
+    .text-group div.green {
+      border-color: #34a853;
+    }
+
+    div.blue::before {
+      background-color: #4285f4;
+    }
+
+    div.red::before {
+      background-color: #ea4335;
+    }
+
+    div.yellow::before {
+      background-color: #fbbc05;
+    }
+
+    div.green::before {
+      background-color: #34a853;
+    }
+
+    .text-group div::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0;
+      transition: .5s;
+    }
+
+    .text-group div:hover::before {
+      height: 100%;
+    }
+
+    div.blue span {
+      color: #4285f4;
+    }
+
+    div.red span {
+      color: #ea4335;
+    }
+
+    div.yellow span {
+      color: #fbbc05;
+    }
+
+    div.green span {
+      color: #34a853;
+    }
+
+    .text-group div span {
+      position: relative;
+      display: inline-block;
+      transition: .5s;
+    }
+
+    .text-group div:hover span {
+      transform: rotateY(360deg);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="text-group">
+    <div class="blue">
+      <span>G</span>
+    </div>
+    <div class="red">
+      <span>o</span>
+    </div>
+    <div class="yellow">
+      <span>o</span>
+    </div>
+    <div class="blue">
+      <span>g</span>
+    </div>
+    <div class="green">
+      <span>l</span>
+    </div>
+    <div class="red">
+      <span>e</span>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션 스킬 프로그래스</title>
+  <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap');
+
+    body {
+      font-family: 'Oswald', sans-serif;
+      margin: 0;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    .skills {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      padding: 40px 25px;
+      border-radius: 5px;
+      color: #f5f5f5;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      background-color: #786fa6;
+    }
+
+    .skills h1 {
+      margin: 0 0 40px;
+      text-align: center;
+      letter-spacing: 1px;
+      font-size: 35px;
+      font-weight: 600;
+    }
+
+    .skill+.skill {
+      margin-top: 15px;
+    }
+
+    .skill p {
+      overflow: hidden;
+      margin: 0 0 5px;
+    }
+
+    .skill p span {
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    .skill p span:nth-child(1) {
+      float: left;
+    }
+
+    .skill p span:nth-child(2) {
+      float: right;
+    }
+
+    .skill__progress {
+      padding: 5px;
+      border: 1px solid #f5f5f5;
+      border-radius: 3px;
+    }
+
+    .skill__progress > div {
+      height: 10px;
+      background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      animation: show 1s;
+      animation-fill-mode: both;
+    }
+
+    .skills .skill:nth-of-type(1) .skill__progress > div {
+      animation-delay: 0s;
+    }
+    .skills .skill:nth-of-type(2) .skill__progress > div {
+      animation-delay: .2s;
+    }
+    .skills .skill:nth-of-type(3) .skill__progress > div {
+      animation-delay: .4s;
+    }
+    .skills .skill:nth-of-type(4) .skill__progress > div {
+      animation-delay: .6s;
+    }
+    .skills .skill:nth-of-type(5) .skill__progress > div {
+      animation-delay: .8s;
+    }
+
+    @keyframes show {
+      0% {
+        width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="skills">
+    <h1>SOFTWARE SKILLS</h1>
+    <div class="skill">
+      <p>
+        <span>HTML5</span>
+        <span>90%</span>
+      </p>
+      <div class="skill__progress">
+        <div style="width: 90%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>
+        <span>CSS3</span>
+        <span>80%</span>
+      </p>
+      <div class="skill__progress">
+        <div style="width: 80%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>
+        <span>JavaScript</span>
+        <span>65%</span>
+      </p>
+      <div class="skill__progress">
+        <div style="width: 65%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>
+        <span>jQuery</span>
+        <span>70%</span>
+      </p>
+      <div class="skill__progress">
+        <div style="width: 70%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>
+        <span>Photoshop</span>
+        <span>82%</span>
+      </p>
+      <div class="skill__progress">
+        <div style="width: 82%;"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

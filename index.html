@@ -12,7 +12,11 @@
   <!-- Featherlight -->
   <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
   <script src="//code.jquery.com/jquery-latest.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"></script>  
+  <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"></script>
+  <!-- Slick Slide -->
+  <link rel="stylesheet" href="./plugin/slick/slick-theme.css" />
+  <link rel="stylesheet" href="./plugin/slick/slick.css" />
+  <script defer src="./plugin/slick/slick.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style_pc.css" media="screen and (min-width: 850.1px)" />
@@ -36,10 +40,10 @@
         <nav id="gnb">
           <h2 class="hide">메인 네비게이션</h2>
           <ul>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SKILLS</a></li>
-            <li><a href="#">WEB PUBLISHING</a></li>
-            <li><a href="#">PRACTICAL PUBLISHING</a></li>
+            <li data-menu="about"><a href="#">ABOUT</a></li>
+            <li data-menu="skills"><a href="#">SKILLS</a></li>
+            <li data-menu="web"><a href="#">WEB PUBLISHING</a></li>
+            <li data-menu="practical"><a href="#">PRACTICAL PUBLISHING</a></li>
           </ul>
         </nav>
       </div>
@@ -57,7 +61,7 @@
         </div>
       </section>
       <!-- ABOUT -->
-      <section class="main-about">
+      <section class="main-about" data-type="about">
         <h2 class="hide">소개 영역</h2>
         <div class="inner">
           <div class="text-group">
@@ -89,7 +93,7 @@
         </div>
       </section>
       <!-- SKILLS -->
-      <section class="main-skills">
+      <section class="main-skills" data-type="skills">
         <h2 class="hide">기술 영역</h2>
         <div class="inner">
           <h3>SKILLS</h3>
@@ -152,7 +156,7 @@
         </div>
       </section>
       <!-- WEB PUBLISHING -->
-      <section class="main-web">
+      <section class="main-web" data-type="web">
         <h2 class="hide">웹 퍼블리싱</h2>
         <div class="inner">
           <h3>WEB PUBLISHING</h3>
@@ -320,50 +324,197 @@
           </div>
         </div>
       </section>
+      <!-- PRACTICAL PUBLISHING -->
+      <section class="main-practical" data-type="practical">
+        <h2 class="hide">실전 퍼블리싱</h2>
+        <div class="inner">
+          <h3>PRACTICAL PUBLISHING</h3>
+          <ul class="main-practical__menu">
+            <li class="selected" data-link="animation"><a href="#">ANIMATION</a></li>
+            <li data-link="hover"><a href="#">HOVER</a></li>
+            <li data-link="tab-menu"><a href="#">TAB MENU</a></li>
+            <li data-link="navigation"><a href="#">NAVIGATION</a></li>
+            <li data-link="js"><a href="#">JS</a></li>
+          </ul>
+          <div class="main-practical__contents visible" data-filter="animation">
+            <div>
+              <a href="./portfolio/practical-works/animation/01/animation1.html" data-featherlight="iframe">
+                <img src="./img/practical/animation/1.png" alt="" />
+                <div class="title">
+                  <span>ANIMATION #1</span>
+                  <span>#HTML #CSS</span>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="./portfolio/practical-works/animation/02/animation2.html" data-featherlight="iframe">
+                <img src="./img/practical/animation/2.png" alt="" />
+                <div class="title">
+                  <span>ANIMATION #2</span>
+                  <span>#HTML #CSS</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="main-practical__contents" data-filter="hover">
+            <div>
+              <a href="./portfolio/practical-works/hover/01/hover1.html" data-featherlight="iframe">
+                <img src="./img/practical/hover/1.png" alt="" />
+                <div class="title">
+                  <span>HOVER #1</span>
+                  <span>#HTML #CSS</span>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="./portfolio/practical-works/hover/02/hover2.html" data-featherlight="iframe">
+                <img src="./img/practical/hover/2.png" alt="" />
+                <div class="title">
+                  <span>HOVER #2</span>
+                  <span>#HTML #CSS</span>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="./portfolio/practical-works/hover/03/hover3.html" data-featherlight="iframe">
+                <img src="./img/practical/hover/3.png" alt="" />
+                <div class="title">
+                  <span>HOVER #3</span>
+                  <span>#HTML #CSS</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="main-practical__contents" data-filter="navigation">
+            <div>
+              <a href="./portfolio/practical-works/navigation/01/navigation1.html" data-featherlight="iframe">
+                <img src="./img/practical/navigation/1.png" alt="" />
+                <div class="title">
+                  <span>NAVIGATION #1</span>
+                  <span>#HTML #CSS</span>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="./portfolio/practical-works/navigation/02/navigation2.html" data-featherlight="iframe">
+                <img src="./img/practical/navigation/2.png" alt="" />
+                <div class="title">
+                  <span>NAVIGATION #2</span>
+                  <span>#HTML #CSS</span>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="./portfolio/practical-works/navigation/03/navigation3.html" data-featherlight="iframe">
+                <img src="./img/practical/navigation/3.png" alt="" />
+                <div class="title">
+                  <span>NAVIGATION #3</span>
+                  <span>#HTML #CSS</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
+    <!-- TO TOP BUTTON -->
+    <a href="#" id="to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
   </div>
 
   <script>
-    'use strict';
-    // 해시태그 기본값 막기
-    $(document).on('click', 'a[href="#"]', function (e) {
-      e.preventDefault();
-    });
+  'use strict';
 
-    // 헤더영역 스크롤 이벤트 추가
-    const header = document.querySelector('#header');
+  // 해시태그 기본값 막기
+  $(document).on('click', 'a[href="#"]', function (e) {
+    e.preventDefault();
+  });
 
-    window.addEventListener('scroll', function () {
-      if (window.pageYOffset > 200) {
-        header.classList.add('minimize');
-      } else {
-        header.classList.remove('minimize');
+  // 헤더영역 스크롤 이벤트 추가
+  const header = document.querySelector('#header');
+  const topBtn = document.querySelector('#to-top');
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 200) {
+      header.classList.add('minimize');
+      topBtn.classList.add('visible');
+    } else {
+      header.classList.remove('minimize');
+      topBtn.classList.remove('visible');
+    }
+  });
+
+  // to top 버튼
+  const wrapper = document.querySelector('#wrapper');
+  topBtn.addEventListener('click', function () {
+    wrapper.scrollIntoView({behavior: 'smooth'});
+  });
+
+  // gnb 영역
+  var gnb = document.getElementById('gnb');
+  var sections = document.querySelectorAll('#main section'); 
+  gnb.addEventListener('click', function (e) {
+    var menu = e.target.dataset.menu || e.target.parentElement.dataset.menu;
+    var type = 0;
+    if (menu === undefined) {
+      return false;
+    }
+    sections.forEach(function (section) {
+      type = section.dataset.type;
+      if (menu === type) {
+        section.scrollIntoView({behavior: 'smooth'});
       }
     });
+  });
 
-    // 웹 퍼블리싱 섹션 탭메뉴 제어
-    const webMenuEls = document.querySelectorAll('.main-web__menu li');
-    webMenuEls.forEach(function (webMenuEl) {
-      webMenuEl.addEventListener('click', function (e) {
-        const link = e.target.dataset.link || e.target.parentElement.dataset.link;
-        const webContents = document.querySelectorAll('.main-web__contents');
-        const selected = document.querySelector('.main-web__menu li.selected');
-        if (link === undefined) {
-          return false;
-        } 
-        webContents.forEach(function (webContent) {
-          if (link === webContent.dataset.filter) {
-            webContent.classList.add('visible');
-          } else {
-            webContent.classList.remove('visible');
-          }
-        });
-        if (selected !== null) {
-          selected.classList.remove('selected');
-        } 
-        e.target.parentElement.classList.add('selected');
+  // 웹 퍼블리싱 섹션 탭메뉴 제어
+  const webMenuEls = document.querySelectorAll('.main-web__menu li');
+  webMenuEls.forEach(function (webMenuEl) {
+    webMenuEl.addEventListener('click', function (e) {
+      const link = e.target.dataset.link || e.target.parentElement.dataset.link;
+      const contents = document.querySelectorAll('.main-web__contents');
+      const selected = document.querySelector('.main-web__menu li.selected');
+      if (link === undefined) {
+        return false;
+      } 
+      contents.forEach(function (content) {
+        if (link === content.dataset.filter) {
+          content.classList.add('visible');
+        } else {
+          content.classList.remove('visible');
+        }
       });
+      if (selected !== null) {
+        selected.classList.remove('selected');
+      } 
+      e.target.parentElement.classList.add('selected');
     });
+  });
+
+  // 웹 프렉티컬 섹션 탭메뉴 제어
+  const practicalMenuEls = document.querySelectorAll('.main-practical__menu li');
+  practicalMenuEls.forEach(function (practicalMenuEl) {
+    practicalMenuEl.addEventListener('click', function (e) {
+      const link = e.target.dataset.link || e.target.parentElement.dataset.link;
+      const contents = document.querySelectorAll('.main-practical__contents');
+      const selected = document.querySelector('.main-practical__menu li.selected');
+      if (link === undefined) {
+        return false;
+      } 
+      contents.forEach(function (content) {
+        if (link === content.dataset.filter) {
+          content.classList.add('visible');
+        } else {
+          content.classList.remove('visible');
+        }
+      });
+      if (selected !== null) {
+        selected.classList.remove('selected');
+      } 
+      e.target.parentElement.classList.add('selected');
+    });
+  });
   </script>
 
 </body>

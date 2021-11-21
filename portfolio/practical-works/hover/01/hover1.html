@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>앱 UI 레이어 3D 호버 에니메이션</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #fff;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .app-ui {
+      position: relative;
+      width: 360px;
+      height: 640px;
+      transform: rotate(-30deg) skewX(20deg) scale(0.6);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      background-color: #ddd;
+      transition: .5s;
+    }
+
+    .app-ui:hover {
+      box-shadow: -50px 100px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .app-ui img {
+      position: absolute;
+      max-width: 100%;
+      transition: .5s;
+    }
+
+    .app-ui:hover img:nth-child(1) {
+      transform: translate(40px, -40px);
+      opacity: .2;
+    }
+
+    .app-ui:hover img:nth-child(2) {
+      transform: translate(80px, -80px);
+      opacity: .4;
+    }
+
+    .app-ui:hover img:nth-child(3) {
+      transform: translate(120px, -120px);
+      opacity: .6;
+    }
+
+    .app-ui:hover img:nth-child(4) {
+      transform: translate(160px, -160px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="app-ui">
+      <img src="img/app-ui-01.jpg" alt="" />
+      <img src="img/app-ui-02.jpg" alt="" />
+      <img src="img/app-ui-03.jpg" alt="" />
+      <img src="img/app-ui-04.jpg" alt="" />
+    </div>
+  </div>
+
+</body>
+</html>
