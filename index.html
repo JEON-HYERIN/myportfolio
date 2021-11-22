@@ -13,16 +13,20 @@
   <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
   <script src="//code.jquery.com/jquery-latest.js"></script>
   <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"></script>
+  <!-- jQuery CDN -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
   <!-- Slick Slide -->
-  <link rel="stylesheet" href="./plugin/slick/slick-theme.css" />
-  <link rel="stylesheet" href="./plugin/slick/slick.css" />
-  <script defer src="./plugin/slick/slick.js"></script>
+  <!-- <script src="./plugin/slick/slick.js"></script> -->
+  <!-- <link rel="stylesheet" href="./plugin/slick/slick-theme.css" /> -->
+  <!-- <link rel="stylesheet" href="./plugin/slick/slick.css" /> -->
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style_pc.css" media="screen and (min-width: 850.1px)" />
   <!-- <link rel="stylesheet" href="./css/style_mobile.css" media="screen and (max-width: 850.0px)" /> -->
   <!-- JS -->
-  <script src="./js/jquery-3.6.0.min.js"></script>
   <script defer src="./js/main.js"></script>
 </head>
 <body>
@@ -335,17 +339,18 @@
             <li data-link="navigation"><a href="#"><span>NAVIGATION</span></a></li>
             <li data-link="js"><a href="#"><span>JS</span></a></li>
           </ul>
-          <div class="main-practical__contents visible" data-filter="animation">
-            <div>
-              <a href="./portfolio/practical-works/animation/01/animation1.html" data-featherlight="iframe">
-                <img src="./img/practical/animation/1.png" alt="" />
-                <div class="title">
-                  <span>ANIMATION #1</span>
-                  <span>#HTML #CSS</span>
-                </div>
-              </a>
-            </div>
-            <div>
+          <div class="main-practical__contents swiper first visible" data-filter="animation">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="./portfolio/practical-works/animation/01/animation1.html" data-featherlight="iframe">
+                  <img src="./img/practical/animation/1.png" alt="" />
+                  <div class="title">
+                    <span>ANIMATION #1</span>
+                    <span>#HTML #CSS</span>
+                  </div>
+                </a>
+              </div>
+            <div class="swiper-slide">
               <a href="./portfolio/practical-works/animation/02/animation2.html" data-featherlight="iframe">
                 <img src="./img/practical/animation/2.png" alt="" />
                 <div class="title">
@@ -355,92 +360,103 @@
               </a>
             </div>
           </div>
-          <div class="main-practical__contents" data-filter="hover">
-            <div>
-              <a href="./portfolio/practical-works/hover/01/hover1.html" data-featherlight="iframe">
-                <img src="./img/practical/hover/1.png" alt="" />
-                <div class="title">
-                  <span>HOVER #1</span>
-                  <span>#HTML #CSS</span>
-                </div>
-              </a>
+          <div class="swiper-pagination"></div>
+        </div>
+          <div class="main-practical__contents swiper second" data-filter="hover">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="./portfolio/practical-works/hover/01/hover1.html" data-featherlight="iframe">
+                  <img src="./img/practical/hover/1.png" alt="" />
+                  <div class="title">
+                    <span>HOVER #1</span>
+                    <span>#HTML #CSS</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./portfolio/practical-works/hover/02/hover2.html" data-featherlight="iframe">
+                  <img src="./img/practical/hover/2.png" alt="" />
+                  <div class="title">
+                    <span>HOVER #2</span>
+                    <span>#HTML #CSS</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./portfolio/practical-works/hover/03/hover3.html" data-featherlight="iframe">
+                  <img src="./img/practical/hover/3.png" alt="" />
+                  <div class="title">
+                    <span>HOVER #3</span>
+                    <span>#HTML #CSS</span>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div>
-              <a href="./portfolio/practical-works/hover/02/hover2.html" data-featherlight="iframe">
-                <img src="./img/practical/hover/2.png" alt="" />
-                <div class="title">
-                  <span>HOVER #2</span>
-                  <span>#HTML #CSS</span>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="./portfolio/practical-works/hover/03/hover3.html" data-featherlight="iframe">
-                <img src="./img/practical/hover/3.png" alt="" />
-                <div class="title">
-                  <span>HOVER #3</span>
-                  <span>#HTML #CSS</span>
-                </div>
-              </a>
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="main-practical__contents" data-filter="navigation">
-            <div>
-              <a href="./portfolio/practical-works/navigation/01/navigation1.html" data-featherlight="iframe">
-                <img src="./img/practical/navigation/1.png" alt="" />
-                <div class="title">
-                  <span>NAVIGATION #1</span>
-                  <span>#HTML #CSS</span>
-                </div>
-              </a>
+          <div class="main-practical__contents swiper third" data-filter="navigation">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="./portfolio/practical-works/navigation/01/navigation1.html" data-featherlight="iframe">
+                  <img src="./img/practical/navigation/1.png" alt="" />
+                  <div class="title">
+                    <span>NAVIGATION #1</span>
+                    <span>#HTML #CSS</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./portfolio/practical-works/navigation/02/navigation2.html" data-featherlight="iframe">
+                  <img src="./img/practical/navigation/2.png" alt="" />
+                  <div class="title">
+                    <span>NAVIGATION #2</span>
+                    <span>#HTML #CSS</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./portfolio/practical-works/navigation/03/navigation3.html" data-featherlight="iframe">
+                  <img src="./img/practical/navigation/3.png" alt="" />
+                  <div class="title">
+                    <span>NAVIGATION #3</span>
+                    <span>#HTML #CSS</span>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div>
-              <a href="./portfolio/practical-works/navigation/02/navigation2.html" data-featherlight="iframe">
-                <img src="./img/practical/navigation/2.png" alt="" />
-                <div class="title">
-                  <span>NAVIGATION #2</span>
-                  <span>#HTML #CSS</span>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="./portfolio/practical-works/navigation/03/navigation3.html" data-featherlight="iframe">
-                <img src="./img/practical/navigation/3.png" alt="" />
-                <div class="title">
-                  <span>NAVIGATION #3</span>
-                  <span>#HTML #CSS</span>
-                </div>
-              </a>
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="main-practical__contents" data-filter="js">
-            <div>
-              <a href="./portfolio/practical-works/js/01/index.html" data-featherlight="iframe">
-                <img src="./img/practical/js/1.png" alt="" />
-                <div class="title">
-                  <span>TO DO LIST</span>
-                  <span>#HTML #CSS #JAVASCRIPT</span>
-                </div>
-              </a>
+          <div class="main-practical__contents swiper fourth" data-filter="js">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="./portfolio/practical-works/js/01/index.html" data-featherlight="iframe">
+                  <img src="./img/practical/js/1.png" alt="" />
+                  <div class="title">
+                    <span>TO DO LIST</span>
+                    <span>#HTML #CSS #JAVASCRIPT</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./portfolio/practical-works/js/02/index.html" data-featherlight="iframe">
+                  <img src="./img/practical/js/2.png" alt="" />
+                  <div class="title">
+                    <span>IMAGE SLIDE</span>
+                    <span>#HTML #CSS #JQUERY</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./portfolio/practical-works/js/03/index.html" data-featherlight="iframe">
+                  <img src="./img/practical/js/3.PNG" alt="" />
+                  <div class="title">
+                    <span>MOUSEWHEEL UI</span>
+                    <span>#HTML #CSS #JQUERY</span>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div>
-              <a href="./portfolio/practical-works/js/02/index.html" data-featherlight="iframe">
-                <img src="./img/practical/js/2.png" alt="" />
-                <div class="title">
-                  <span>IMAGE SLIDE</span>
-                  <span>#HTML #CSS #JQUERY</span>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="./portfolio/practical-works/js/03/index.html" data-featherlight="iframe">
-                <img src="./img/practical/js/3.PNG" alt="" />
-                <div class="title">
-                  <span>MOUSEWHEEL UI</span>
-                  <span>#HTML #CSS #JQUERY</span>
-                </div>
-              </a>
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>

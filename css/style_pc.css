@@ -184,7 +184,7 @@ section.main-about .inner {
 
 .main-about .links a i {
   font-size: 35px;
-  color: #264B57;
+  color: #2C3A47;
 }
 
 .main-about .links a span {
@@ -464,20 +464,12 @@ section.main-skills .inner {
 .main-practical__contents {
   float: right;
   width: 75%;
+  padding-bottom: 80px;
   display: none;
 }
 
 .main-practical__contents.visible {
   display: block;
-}
-
-.main-practical__contents > div {
-  display: inline-block;
-  width: calc(33.33% - 10px);
-}
-
-.main-practical__contents > div + div {
-  margin-left: 8px;
 }
 
 .main-practical__contents a {
@@ -492,7 +484,14 @@ section.main-skills .inner {
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+.main-practical__contents .swiper-slide .title {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.main-practical__contents .swiper-slide.swiper-slide-active .title {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .main-practical__contents .title span {
@@ -509,6 +508,21 @@ section.main-skills .inner {
   bottom: -20px;
   font-size: 14px;
   font-weight: 300;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background-color: #eee;
+  opacity: 1;
+  transition: .3s;
+}
+
+.swiper-pagination-bullet-active {
+  width: 25px;
+  border-radius: 40px;
+  background-color: #2C3A47;
 }
 
 /* TO TOP BUTTON */
