@@ -546,6 +546,37 @@ section.main-skills .inner {
   background-color: #2C3A47;
 }
 
+/* FOOTER */
+#footer {
+  background-color: #eee;
+}
+
+#footer .inner {
+  padding: 70px 0;
+}
+
+#footer .text-group {
+  text-align: center;
+}
+
+.footer__text span {
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+.footer__text span em {
+  font-weight: 600;
+  color: #264B57;
+}
+
+.footer__text.ko {
+  margin-top: 25px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6em;
+}
+
 /* TO TOP BUTTON */
 #to-top {
   position: fixed;

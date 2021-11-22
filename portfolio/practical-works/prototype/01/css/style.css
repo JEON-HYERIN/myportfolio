@@ -1,0 +1,173 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* Reset.css */
+body {
+  font-family: arial;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.hide {
+  position: absolute;
+  left: -9999px;
+}
+
+/* index.html */
+.profile {
+  width: 340px;
+  padding: 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 30px rgb(0 0 0 / 10%);
+  background-color: #fff;
+}
+.profile__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.profile__nav > div {
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+}
+.profile__visual {
+  text-align: center;
+}
+.profile__visual .image {
+  width: 200px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile__visual h2 {
+  font-size: 22px;
+  color: #555;
+  margin: 0;
+}
+.profile__visual p {
+  margin: 5px 0 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #bbb;
+}
+.profile__visual .btn {
+  display: block;
+  width: 180px;
+  height: 32px;
+  margin: 0 auto 20px;
+  line-height: 32px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+.profile__sns {
+  margin-bottom: 25px;
+}
+.profile__sns a {
+  display: block;
+  padding: 10px 0;
+}
+.profile__sns a .logo {
+  display: inline-block;
+  width: 20%;
+  font-size: 15px;
+  color: #555;
+}
+.profile__sns a span {
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.profile__menu {
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 0;
+  text-align: center;
+}
+.profile__menu li {
+  display: inline-block;
+  margin: 0 10px;
+  opacity: .3;
+}
+.profile__menu li.active {
+  opacity: 1;
+}
+.profile__menu li a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.profile__menu li:nth-child(1) a {
+  background-color: aqua;
+  box-shadow: 5px 5px 10px rgba(0, 255, 255, .5);
+}
+.profile__menu li:nth-child(2) a {
+  background-color: #41fbb4;
+  box-shadow: 5px 5px 10px rgba(65, 251, 180, .5);
+}
+.profile__menu li:nth-child(3) a {
+  background-color: hotpink;
+  box-shadow: 5px 5px 10px rgb(255, 105, 180, .7);
+}
+.profile__menu li:nth-child(4) a {
+  background-color:  #9410c8;
+  box-shadow: 5px 5px 10px rgba(148, 16, 200, .7);
+}
+
+.profile-1 {
+  background-color: lightcyan;
+}
+.profile-1 .profile__visual .image {
+  box-shadow: 5px 15px 30px rgba(144, 223, 255, .8);
+}
+.profile-1 .profile__visual .btn {
+  background: linear-gradient(45deg, aqua, #77d9ff);
+  box-shadow: 5px 10px 20px rgba(0, 255, 255, .5);
+}
+.profile-2 {
+  background-color: rgb(224, 255, 234);
+}
+.profile-2 .profile__visual .image {
+  box-shadow: 5px 15px 30px rgba(144, 255, 203, 0.8);
+}
+.profile-2 .profile__visual .btn {
+  background: linear-gradient(45deg, #00ffb3, #77ffa0);
+  box-shadow: 5px 10px 20px rgba(0, 255, 170, 0.5);
+}
+.profile-3 {
+  background-color: rgb(252, 224, 255);
+}
+.profile-3 .profile__visual .image {
+  box-shadow: 5px 15px 30px rgba(246, 144, 255, 0.8);
+}
+.profile-3 .profile__visual .btn {
+  background: linear-gradient(45deg, #ff00f2, #ff77b7);
+  box-shadow: 5px 10px 20px rgba(255, 0, 234, 0.5);
+}
+.profile-4 {
+  background-color: rgb(245, 224, 255);
+}
+.profile-4 .profile__visual .image {
+  box-shadow: 5px 15px 30px rgba(220, 144, 255, 0.8);
+}
+.profile-4 .profile__visual .btn {
+  background: linear-gradient(45deg, #c300ff, #bd77ff);
+  box-shadow: 5px 10px 20px rgba(174, 0, 255, 0.5);
+}
