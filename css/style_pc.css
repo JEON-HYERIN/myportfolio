@@ -96,6 +96,31 @@ p.description {
   color: #fff;
 }
 
+#gnb ul li a span {
+  position: relative;
+  pointer-events: none;
+}
+
+#gnb ul li a span::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: .3s;
+}
+
+#gnb ul li:hover a span::after {
+  width: 100%;
+}
+
+#gnb ul li.selected a span::after {
+  width: 100%;
+}
+
 /* MAIN */
 /* VISUAL */
 .main-visual {
