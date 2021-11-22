@@ -1,7 +1,7 @@
 'use strict';
 
 // 실전 퍼블리싱 슬라이드
-new Swiper('.main-practical__contents.swiper.first', {
+new Swiper('.main-practical__content.swiper.first', {
   loop: true,
   // autoplay: true,
   slidesPerView: 2,
@@ -12,7 +12,7 @@ new Swiper('.main-practical__contents.swiper.first', {
   },
   effect: 'coverflow'
 });
-new Swiper('.main-practical__contents.swiper.second', {
+new Swiper('.main-practical__content.swiper.second', {
   loop: true,
   // autoplay: true,
   slidesPerView: 2,
@@ -23,7 +23,7 @@ new Swiper('.main-practical__contents.swiper.second', {
   },
   effect: 'coverflow'
 });
-new Swiper('.main-practical__contents.swiper.third', {
+new Swiper('.main-practical__content.swiper.third', {
   loop: true,
   // autoplay: true,
   slidesPerView: 2,
@@ -34,7 +34,7 @@ new Swiper('.main-practical__contents.swiper.third', {
   },
   effect: 'coverflow'
 });
-new Swiper('.main-practical__contents.swiper.fourth', {
+new Swiper('.main-practical__content.swiper.fourth', {
   loop: true,
   // autoplay: true,
   slidesPerView: 2,

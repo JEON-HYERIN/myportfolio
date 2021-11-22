@@ -287,45 +287,55 @@ section.main-skills .inner {
   background-color: #2C3A47;
 }
 
-.main-web__contents {
+.main-web .contents {
+  opacity: 1;
+  transition: .3s;
+}
+
+.main-web .contents.anim-out {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.main-web__content {
   display: none;
 }
 
-.main-web__contents.visible {
+.main-web__content.visible {
   display: block;
 }
 
-.main-web__contents > img {
+.main-web__content > img {
   width: 100px;
 }
 
-.main-web__contents.outback > img {
+.main-web__content.outback > img {
   padding: 8px;
   background-color: #343436;
 }
 
-.main-web__contents.wisewedding > img {
+.main-web__content.wisewedding > img {
   width: 120px;
   padding: 8px;
   background-color: #fff;
 }
 
-.main-web__contents > div {
+.main-web__content > div {
   display: inline-block;
   vertical-align: top;
 }
 
-.main-web__contents .text-group {
+.main-web__content .text-group {
   width: 45%;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 15px;
 }
 
-.main-web__contents .text-group > div {
+.main-web__content .text-group > div {
   margin-top: 15px;
 }
 
-.main-web__contents em {
+.main-web__content em {
   display: block;
   margin-bottom: 5px;
   font-size: 18px;
@@ -333,37 +343,37 @@ section.main-skills .inner {
   color: #546e7a;
 }
 
-.main-web__contents .summary .description {
+.main-web__content .summary .description {
   font-size: 15px;
 }
 
-.main-web__contents .method .table {
+.main-web__content .method .table {
   display: table;
   font-size: 15px;
 }
 
-.main-web__contents .method .table .row {
+.main-web__content .method .table .row {
   display: table-row;
 }
 
-.main-web__contents .method .table .row:nth-child(1) .cell {
+.main-web__content .method .table .row:nth-child(1) .cell {
   padding-bottom: 5px;
 }
 
-.main-web__contents .method .table .cell {
+.main-web__content .method .table .cell {
   display: table-cell;
 }
 
-.main-web__contents .method .table .cell:nth-child(2n) {
+.main-web__content .method .table .cell:nth-child(2n) {
   padding-left: 25px;
 }
 
-.main-web__contents .view {
+.main-web__content .view {
   padding-top: 30px;
   text-align: center;
 }
 
-.main-web__contents .view .btn {
+.main-web__content .view .btn {
   display: inline-block;
   padding: 8px 12px;
   border: 1px solid #2C3A47;
@@ -373,47 +383,45 @@ section.main-skills .inner {
   color: #f4f4f4;
   transition: .3s;
 }
-
-.main-web__contents.jejubeer .view .btn {
+.main-web__content.jejubeer .view .btn {
   background-color: #2D4C7A;
-}
-.main-web__contents.jejubeer .view .btn:hover {
+}.main-web__content.jejubeer .view .btn:hover {
   border-color: #1ecad3;
   color: #fff;
   background-color: #1ecad3;
 }
-.main-web__contents.cotieshop .view .btn {
+.main-web__content.cotieshop .view .btn {
   background-color: #212121;
 }
-.main-web__contents.cotieshop .view .btn:hover {
+.main-web__content.cotieshop .view .btn:hover {
   border-color: #000;
   color: #000;
   background-color: #F0EDE6;
 }
-.main-web__contents.outback .view .btn {
+.main-web__content.outback .view .btn {
   background-color: #343436;
 }
-.main-web__contents.outback .view .btn:hover {
+.main-web__content.outback .view .btn:hover {
   border-color: #b10a11;
   color: #fff;
   background-color: #b10a11;
 }
-.main-web__contents.wisewedding .view .btn {
+.main-web__content.wisewedding .view .btn {
   border-color: #000;
   color: #000;
   background-color: #fff;
 }
-.main-web__contents.wisewedding .view .btn:hover {
+.main-web__content.wisewedding .view .btn:hover {
   border-color: #bf8365;
   color: #fff;
   background-color: #bf8365;
 }
 
-.main-web__contents .view .btn + .btn {
+.main-web__content .view .btn + .btn {
   margin-left: 7px;
 }
 
-.main-web__contents .image {
+.main-web__content .image {
   width: 50%;
   margin-left: 4%;
 }
@@ -441,9 +449,11 @@ section.main-skills .inner {
 }
 
 .main-practical__menu li a {
+  position: relative;
   display: block;
   font-size: 18px;
   font-weight: 300;
+  z-index: 2;
 }
 
 .main-practical__menu li a span {
@@ -461,23 +471,34 @@ section.main-skills .inner {
   background-color: #2C3A47;
 }
 
-.main-practical__contents {
+.main-practical .contents {
   float: right;
   width: 75%;
+  opacity: 1;
+  transition: .3s;
+}
+
+.main-practical .contents.anim-out {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+.main-practical__content {
   padding-bottom: 80px;
   display: none;
 }
 
-.main-practical__contents.visible {
+.main-practical__content.visible {
   display: block;
 }
 
-.main-practical__contents a {
+.main-practical__content a {
   position: relative;
   display: block;
+  z-index: 1;
 }
 
-.main-practical__contents .title {
+.main-practical__content .title {
   content: '';
   position: absolute;
   left: 0;
@@ -486,31 +507,31 @@ section.main-skills .inner {
   height: 100%;
 }
 
-.main-practical__contents .swiper-slide .title {
+.main-practical__content .swiper-slide .title {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.main-practical__contents .swiper-slide.swiper-slide-active .title {
+.main-practical__content .swiper-slide.swiper-slide-active .title {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.main-practical__contents .title span {
+.main-practical__content .title span {
   position: absolute;
   left: 10px;
 }
-.main-practical__contents .title span:nth-child(1) {
+.main-practical__content .title span:nth-child(1) {
   bottom: 0;
   font-size: 23px;
   font-weight: 400;
   color: #fff;
 }
-.main-practical__contents .title span:nth-child(2) {
+.main-practical__content .title span:nth-child(2) {
   bottom: -20px;
   font-size: 14px;
   font-weight: 300;
 }
 
-.swiper-pagination-bullet {
+.main-practical__content .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border: 2px solid rgba(255, 255, 255, 0.6);
@@ -519,7 +540,7 @@ section.main-skills .inner {
   transition: .3s;
 }
 
-.swiper-pagination-bullet-active {
+.main-practical__content .swiper-pagination-bullet-active {
   width: 25px;
   border-radius: 40px;
   background-color: #2C3A47;
