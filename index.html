@@ -15,17 +15,13 @@
   <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"></script>
   <!-- jQuery CDN -->
   <script src="./js/jquery-3.6.0.min.js"></script>
-  <!-- Slick Slide -->
-  <!-- <script src="./plugin/slick/slick.js"></script> -->
-  <!-- <link rel="stylesheet" href="./plugin/slick/slick-theme.css" /> -->
-  <!-- <link rel="stylesheet" href="./plugin/slick/slick.css" /> -->
   <!-- Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style_pc.css" media="screen and (min-width: 850.1px)" />
-  <!-- <link rel="stylesheet" href="./css/style_mobile.css" media="screen and (max-width: 850.0px)" /> -->
+  <link rel="stylesheet" href="./css/style_mobile.css" media="screen and (max-width: 850.0px)" />
   <!-- JS -->
   <script defer src="./js/main.js"></script>
 </head>
@@ -36,11 +32,13 @@
     <!-- HEADER -->
     <header id="header">
       <div class="inner">
-        <h1>
-          <a href="./index.html">
-            <span>HYERIN</span>
-          </a>
-          </h1>
+        <h1><a href="./index.html"><span>HYERIN</span></a></h1>
+        <a href="#" class="menu-btn mobile">
+          <i class="fas fa-bars"><span>네비게이션 열기</span></i>
+        </a>
+        <a href="#" class="close-btn invisible mobile">
+          <i class="fas fa-times"><span>네비게이션 닫기</span></i>
+        </a>
         <nav id="gnb">
           <h2 class="hide">메인 네비게이션</h2>
           <ul>
@@ -68,17 +66,24 @@
       <section class="main-about" data-type="about">
         <h2 class="hide">소개 영역</h2>
         <div class="inner">
+          <div class="image pc">
+            <img src="./img/profile_original.jpg" alt="" />
+          </div>
           <div class="text-group">
             <div class="title">
-                "Hello,<br />
-                my name is<br />
-                Hyerin"
+              "Hello,<br />
+              my name is<br class="only-pc" />
+              Hyerin"
+            </div>
+            <div class="image mobile">
+              <img src="./img/profile_original.jpg" alt="" />
             </div>
             <p class="description">
-              매일매일 성장하고 있는 웹 퍼블리셔 전혜린입니다.<br />"성실함을 이기는 것은 없다"는 마음가짐으로 <em>기술 블로그에 공부 기록을 꾸준히 하여</em><br /> 새롭게 배운 내용은 내 것으로 만들고자 노력하고 있습니다.<br />
+              매일매일 성장하고 있는 웹 퍼블리셔 전혜린입니다.<br />"성실함을 이기는 것은 없다"는 마음가짐으로 <em>기술 블로그에 공부 기록을 꾸준히 하여</em><br /> 새롭게 배운 내용은
+              내 것으로 만들고자 노력하고 있습니다.<br />
               또한 협업에 필요한 깃허브의 Git 명령어를 학습하였으며 항상 커밋하는 습관을 들여<br /> 약 5개월간 <em>1,000건 이상의 commit 경험</em>이 있습니다.<br />
               저에게 퍼블리싱은 제가 하고 싶은 일이 무엇인지 깨닫게 해준 직무입니다.<br />
-              이 열정으로 꾸준히 노력하여 늘 발전하는 웹 퍼블리셔가 되겠습니다.              
+              이 열정으로 꾸준히 노력하여 늘 발전하는 웹 퍼블리셔가 되겠습니다.
             </p>
             <div class="links">
               <a href="https://github.com/JEON-HYERIN" target="_blank">
@@ -90,9 +95,6 @@
                 <span>blog</span>
               </a>
             </div>
-          </div>
-          <div class="image">
-            <img src="./img/profile_original.jpg" alt="" />
           </div>
         </div>
       </section>
@@ -108,7 +110,8 @@
                 HTML
               </em>
               <p class="description">
-                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹사이트 퍼블리싱을 하고 있습니다. 웹 표준을 위해 HTML5에서 권장하는 마크업 방식과 시멘틱 태그를 이용해 전체 레이아웃을 설계합니다. 또한 웹 접근성 준수를 위해 키보드에 대한 대응과 적절한 대체 텍스트를 제공하고자 노력합니다. 
+                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹사이트 퍼블리싱을 하고 있습니다. 웹 표준을 위해 HTML5에서 권장하는 마크업 방식과 시멘틱 태그를 이용해 전체 레이아웃을
+                설계합니다. 또한 웹 접근성 준수를 위해 키보드에 대한 대응과 적절한 대체 텍스트를 제공하고자 노력합니다.
               </p>
             </li>
             <li>
@@ -117,7 +120,8 @@
                 CSS
               </em>
               <p class="description">
-                크로스브라우징을 위해 안정적인 CSS 속성을 사용해서 HTML Element를 배치하고 디자인합니다. 레이아웃 제작에서 기존 방식인 float과 최신 트랜드인 flex 기법을 적재적소에 활용할 수 있습니다. 또한, 생산성과 협업을 위하여 CSS 전처리기인 SCSS 기본 문법도 숙지하고 있습니다.
+                크로스브라우징을 위해 안정적인 CSS 속성을 사용해서 HTML Element를 배치하고 디자인합니다. 레이아웃 제작에서 기존 방식인 float과 최신 트랜드인 flex 기법을 적재적소에
+                활용할 수 있습니다. 또한, 생산성과 협업을 위하여 CSS 전처리기인 SCSS 기본 문법도 숙지하고 있습니다.
               </p>
             </li>
             <li>
@@ -126,7 +130,8 @@
                 JQUERY
               </em>
               <p class="description">
-                이미지 슬라이드, 마우스 휠에 반응하는 슬라이드 배너, 내비게이션, 탭 메뉴, 아코디언 등 웹 퍼블리싱에 필요한 제이쿼리는 플러그인을 사용하지 않고 순수 제이쿼리 코딩으로 제작할 수 있습니다. 또한 필수적인 자바스크립트 활용은 가능하며 주로 제이쿼리와 병행해서 활용합니다.
+                이미지 슬라이드, 마우스 휠에 반응하는 슬라이드 배너, 내비게이션, 탭 메뉴, 아코디언 등 웹 퍼블리싱에 필요한 제이쿼리는 플러그인을 사용하지 않고 순수 제이쿼리 코딩으로 제작할 수
+                있습니다. 또한 필수적인 자바스크립트 활용은 가능하며 주로 제이쿼리와 병행해서 활용합니다.
               </p>
             </li>
             <li>
@@ -135,7 +140,8 @@
                 RESPONSIVE WEB
               </em>
               <p class="description">
-                반응형 웹 제작에 있어서 크로스브라우징을 위해 안정적인 기존방식인 float, position, Media Query를 활용한 반응형 웹 제작 경험을 충분히 가지고 있습니다. 모바일 웹 앱 제작의 경우에는 flex를 활용합니다.
+                반응형 웹 제작에 있어서 크로스브라우징을 위해 안정적인 기존방식인 float, position, Media Query를 활용한 반응형 웹 제작 경험을 충분히 가지고 있습니다. 모바일 웹
+                앱 제작의 경우에는 flex를 활용합니다.
               </p>
             </li>
             <li>
@@ -177,7 +183,9 @@
                 <div class="summary">
                   <em>프로젝트 개요</em>
                   <p class="description">
-                    페이지마다 다른 테마로 구성된 제주맥주 웹사이트에 매력을 느껴 모든 서브 페이지를 제작하였습니다. 모바일 내비게이션은 사용자가 좀 더 직관적으로 알아볼 수 있도록 약간의 리 디자인을 진행하였습니다. floating action button에서 문의하기 모달창은 제주맥주 대표색채로 재작업하였으며, 키보드 사용자를 위해 키보드 접근성도 고려하여 제작하였습니다. 또한 SNS 연동까지 완료함으로써 실제 웹사이트처럼 원하는 정보를 획득할 수 있습니다.
+                    페이지마다 다른 테마로 구성된 제주맥주 웹사이트에 매력을 느껴 모든 서브 페이지를 제작하였습니다. 모바일 내비게이션은 사용자가 좀 더 직관적으로 알아볼 수 있도록 약간의 리
+                    디자인을 진행하였습니다. floating action button에서 문의하기 모달창은 제주맥주 대표색채로 재작업하였으며, 키보드 사용자를 위해 키보드 접근성도 고려하여
+                    제작하였습니다. 또한 SNS 연동까지 완료함으로써 실제 웹사이트처럼 원하는 정보를 획득할 수 있습니다.
                   </p>
                 </div>
                 <div class="period">
@@ -198,12 +206,14 @@
                     <div class="row">
                       <span class="cell">Library</span>
                       <span class="cell">Swiper Slide, ScrollMagic</span>
-                    </div>                  
+                    </div>
                   </div>
                 </div>
                 <div class="view">
-                  <a href="./portfolio/website-works/01/index.html" class="btn" data-featherlight="iframe">PC version</a>
-                  <a href="./portfolio/website-works/01/mockup/html/mobile-main.html" class="btn" data-featherlight="iframe">Mobile version</a>
+                  <a href="./portfolio/website-works/01/index.html" class="btn" data-featherlight="iframe">PC
+                    version</a>
+                  <a href="./portfolio/website-works/01/mockup/html/mobile-main.html" class="btn"
+                    data-featherlight="iframe">Mobile version</a>
                 </div>
               </div>
               <div class="image">
@@ -216,7 +226,9 @@
                 <div class="summary">
                   <em>프로젝트 개요</em>
                   <p class="description">
-                    꼬띠샵은 2021 GDWEB 디자인 어워즈 WEB 부문에서 WINNER PRIZE를 수상하였습니다. 프리미엄 잡지 컨셉으로 위트있는 아이콘들과 일러스트 비주얼이 매력적이어서 클론코딩 대상으로 삼았습니다. 브랜드의 개성을 유지하면서도 꼬띠샵만의 캐릭터를 활용하여 마우스 호버 효과, 탑 버튼, 마우스 커서 모양 변경 등 다양한 요소를 곳곳에 배치하여 재미있습니다. 사용자의 UI 부분을 고려하여 모든 서브 페이지를 제작하였으며, 페이지 곳곳의 숨은 애니메이션은 주로 keyframes로 구현하였습니다.
+                    꼬띠샵은 2021 GDWEB 디자인 어워즈 WEB 부문에서 WINNER PRIZE를 수상하였습니다. 프리미엄 잡지 컨셉으로 위트있는 아이콘들과 일러스트 비주얼이 매력적이어서
+                    클론코딩 대상으로 삼았습니다. 브랜드의 개성을 유지하면서도 꼬띠샵만의 캐릭터를 활용하여 마우스 호버 효과, 탑 버튼, 마우스 커서 모양 변경 등 다양한 요소를 곳곳에 배치하여
+                    재미있습니다. 사용자의 UI 부분을 고려하여 모든 서브 페이지를 제작하였으며, 페이지 곳곳의 숨은 애니메이션은 주로 keyframes로 구현하였습니다.
                   </p>
                 </div>
                 <div class="period">
@@ -237,12 +249,14 @@
                     <div class="row">
                       <span class="cell">Library</span>
                       <span class="cell">GSAP, Swiper Slide, ScrollMagic</span>
-                    </div>                  
+                    </div>
                   </div>
                 </div>
                 <div class="view">
-                  <a href="./portfolio/website-works/02/index.html" class="btn" data-featherlight="iframe">PC version</a>
-                  <a href="./portfolio/website-works/02/mockup/html/mobile-main.html" class="btn" data-featherlight="iframe">Mobile version</a>
+                  <a href="./portfolio/website-works/02/index.html" class="btn" data-featherlight="iframe">PC
+                    version</a>
+                  <a href="./portfolio/website-works/02/mockup/html/mobile-main.html" class="btn"
+                    data-featherlight="iframe">Mobile version</a>
                 </div>
               </div>
               <div class="image">
@@ -255,7 +269,10 @@
                 <div class="summary">
                   <em>프로젝트 개요</em>
                   <p class="description">
-                    일반적인 웹사이트의 레이아웃 구조를 가진 아웃백을 타겟으로 삼아 리디자인을 진행하였습니다. 기존 아웃백 웹사이트는 반응형이 아니어서 아웃백 모바일 버전 디자인을 참고하였습니다. 서브 메뉴가 다소 많은 아웃백의 특성을 고려하여 메뉴 열기/닫기를 눌러도 현재 페이지의 위치가 확인될 수 있도록 수정하였으며 이 부분은 플러그인 없이 순수 하드코딩으로 진행하였습니다. 또한, 아웃백은 이미지가 많은 편으로 스크린 리더로 웹사이트에 접속하는 사용자가 정보의 소외감을 느끼지 않도록 대체 텍스트를 매우 신경 썼습니다. 뿐만 아니라 키보드 접근성을 고려하여 스크립트를 작성하였습니다. UI 부분을 고려하여 서브 페이지 포함 총 6페이지를 제작하였습니다.
+                    일반적인 웹사이트의 레이아웃 구조를 가진 아웃백을 타겟으로 삼아 리디자인을 진행하였습니다. 기존 아웃백 웹사이트는 반응형이 아니어서 아웃백 모바일 버전 디자인을 참고하였습니다.
+                    서브 메뉴가 다소 많은 아웃백의 특성을 고려하여 메뉴 열기/닫기를 눌러도 현재 페이지의 위치가 확인될 수 있도록 수정하였으며 이 부분은 플러그인 없이 순수 하드코딩으로
+                    진행하였습니다. 또한, 아웃백은 이미지가 많은 편으로 스크린 리더로 웹사이트에 접속하는 사용자가 정보의 소외감을 느끼지 않도록 대체 텍스트를 매우 신경 썼습니다. 뿐만 아니라
+                    키보드 접근성을 고려하여 스크립트를 작성하였습니다. UI 부분을 고려하여 서브 페이지 포함 총 6페이지를 제작하였습니다.
                   </p>
                 </div>
                 <div class="period">
@@ -276,12 +293,14 @@
                     <div class="row">
                       <span class="cell">Library</span>
                       <span class="cell">GSAP, Swiper Slide, ScrollMagic</span>
-                    </div>                  
+                    </div>
                   </div>
                 </div>
                 <div class="view">
-                  <a href="./portfolio/website-works/03/index.html" class="btn" data-featherlight="iframe">PC version</a>
-                  <a href="./portfolio/website-works/03/mockup/html/mobile-main.html" class="btn" data-featherlight="iframe">Mobile version</a>
+                  <a href="./portfolio/website-works/03/index.html" class="btn" data-featherlight="iframe">PC
+                    version</a>
+                  <a href="./portfolio/website-works/03/mockup/html/mobile-main.html" class="btn"
+                    data-featherlight="iframe">Mobile version</a>
                 </div>
               </div>
               <div class="image">
@@ -294,7 +313,11 @@
                 <div class="summary">
                   <em>프로젝트 개요</em>
                   <p class="description">
-                    최대한 라이브러리, 플러그인 사용 없이 제작하고자 노력하였으며 대부분의 메인 페이지 이미지 슬라이드는 제이쿼리로 하드 코딩하였습니다. 슬라이드가 자동 재생될 수 있도록 타이머 함수(setTimeout)를 사용하였으며 Indicator도 배치하여 사용자가 버튼을 누르면 타이머 함수가 해제되고 이후 다시 재생되도록 구현하였습니다. 다른 페이지에서도 슬라이드가 사용될 가능성을 고려하여 선택자 매개변수를 만들었으며 타이머 시간 간격, 자동 재생 여부 등 세부 조정이 가능합니다. 또한 비교적 폼 요소가 많이 들어간 서브 페이지도 구현하였습니다. 기존 웹사이트의 경우 키보드 접근성을 고려하지 않고 제작되어있어, 저는 마우스 대신 키보드로도 이용할 수 있도록 outline 속성을 함부로 없애지 않도록 리디자인하였습니다. 또한 UI 부분을 고려하여 서브 페이지 3개를 제작하였습니다.
+                    최대한 라이브러리, 플러그인 사용 없이 제작하고자 노력하였으며 대부분의 메인 페이지 이미지 슬라이드는 제이쿼리로 하드 코딩하였습니다. 슬라이드가 자동 재생될 수 있도록 타이머
+                    함수(setTimeout)를 사용하였으며 Indicator도 배치하여 사용자가 버튼을 누르면 타이머 함수가 해제되고 이후 다시 재생되도록 구현하였습니다. 다른 페이지에서도
+                    슬라이드가 사용될 가능성을 고려하여 선택자 매개변수를 만들었으며 타이머 시간 간격, 자동 재생 여부 등 세부 조정이 가능합니다. 또한 비교적 폼 요소가 많이 들어간 서브 페이지도
+                    구현하였습니다. 기존 웹사이트의 경우 키보드 접근성을 고려하지 않고 제작되어있어, 저는 마우스 대신 키보드로도 이용할 수 있도록 outline 속성을 함부로 없애지 않도록
+                    리디자인하였습니다. 또한 UI 부분을 고려하여 서브 페이지 3개를 제작하였습니다.
                   </p>
                 </div>
                 <div class="period">
@@ -315,12 +338,14 @@
                     <div class="row">
                       <span class="cell">Library</span>
                       <span class="cell">이미지 슬라이드 하드 코딩, Swiper Slide(부분 사용)</span>
-                    </div>                  
+                    </div>
                   </div>
                 </div>
                 <div class="view">
-                  <a href="./portfolio/website-works/04/index.html" class="btn" data-featherlight="iframe">PC version</a>
-                  <a href="./portfolio/website-works/04/mockup/html/mobile-main.html" class="btn" data-featherlight="iframe">Mobile version</a>
+                  <a href="./portfolio/website-works/04/index.html" class="btn" data-featherlight="iframe">PC
+                    version</a>
+                  <a href="./portfolio/website-works/04/mockup/html/mobile-main.html" class="btn"
+                    data-featherlight="iframe">Mobile version</a>
                 </div>
               </div>
               <div class="image">
@@ -354,18 +379,18 @@
                     </div>
                   </a>
                 </div>
-              <div class="swiper-slide">
-                <a href="./portfolio/practical-works/animation/02/animation2.html" data-featherlight="iframe">
-                  <img src="./img/practical/animation/2.png" alt="" />
-                  <div class="title">
-                    <span>ANIMATION #2</span>
-                    <span>#HTML #CSS</span>
-                  </div>
-                </a>
+                <div class="swiper-slide">
+                  <a href="./portfolio/practical-works/animation/02/animation2.html" data-featherlight="iframe">
+                    <img src="./img/practical/animation/2.png" alt="" />
+                    <div class="title">
+                      <span>ANIMATION #2</span>
+                      <span>#HTML #CSS</span>
+                    </div>
+                  </a>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
             <div class="main-practical__content swiper hover" data-filter="hover">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -494,13 +519,13 @@
       <div class="inner">
         <div class="text-group">
           <div class="footer__text en">
-            <span><em>Publishing</em> Works</span><br />
+            <span><em>Publishing</em> Works</span><br class="only-pc" />
             <span>with <em>Humility</em> and <em>responsibility</em></span>
           </div>
           <div class="footer__text ko">
             웹 퍼블리셔라는 새로운 시작을 하게 되었습니다.<br />
             초심을 잃지 않고 항상 처음과 같은 마음으로 노력하고 있습니다.<br />
-            책임감을 가지고 임하며 맡은 바에 있어서 항상 최선을 다할 것을 약속드립니다. 
+            책임감을 가지고 임하며 맡은 바에 있어서 항상 최선을 다할 것을 약속드립니다.
           </div>
         </div>
       </div>
@@ -522,6 +547,50 @@
   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
+
+  const body = document.querySelector('body');
+  var scrollPosition = 0;
+  // 모달창 열기
+  function enable() {
+    scrollPosition = window.pageYOffset;
+    body.style.overflow = 'hidden';
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollPosition}px`;
+    body.style.width = '100%';
+  }
+  // 모달창 닫기
+  function disable() {
+    body.style.removeProperty('overflow');
+    body.style.removeProperty('position');
+    body.style.removeProperty('top');
+    body.style.removeProperty('width');
+    window.scrollTo(0, scrollPosition);
+  }
+
+  // 모바일 네비게이션
+  $('#header .menu-btn').on('click', function () {
+    $(this).addClass('invisible');
+    $('#header .close-btn').removeClass('invisible');
+    $('#gnb').addClass('open');
+    $('#gnb > ul > li.active > a').trigger('click');
+    enable();
+    });
+
+    $('#header .close-btn').on('click', function () {
+      $(this).addClass('invisible');
+      $('#header .menu-btn').removeClass('invisible');
+      $('#gnb').removeClass('open');
+      $('#gnb > ul > li.selected > a').trigger('click');
+      disable();
+    });
+
+    $(window).on('resize', function () {
+    if ($(window).width() >= 1024) {
+      if ($('#gnb').hasClass('open') === true) {
+        disable();
+      } 
+    } 
+  });
 
   // 헤더영역 스크롤 이벤트 추가
   const header = document.querySelector('#header');
