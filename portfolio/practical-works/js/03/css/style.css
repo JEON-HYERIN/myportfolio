@@ -69,3 +69,16 @@ section.page-04 {
 section.page-05 {
   background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
 }
+
+section h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: arial;
+  font-size: 120px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #f1f2f6;
+}
