@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>풀스크린 탭 콘텐츠 슬라이더 응용</title>
+  <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      line-height: 1.5em;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    input[name="tab-menu"] {
+      display: none;
+    }
+
+    .slide {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slide-inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 300%;
+      height: 100%;
+      transition: .5s;
+    }
+
+    input[id="tab1"]:checked~.slide .slide-inner {
+      left: 0;
+    }
+
+    input[id="tab2"]:checked~.slide .slide-inner {
+      left: -100%;
+    }
+
+    input[id="tab3"]:checked~.slide .slide-inner {
+      left: -200%;
+    }
+
+    .slide-inner div {
+      position: relative;
+      width: 33.33%;
+      height: 100%;
+      float: left;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .slide-inner>div:nth-child(1) {
+      background-image: url("./img/1.jpg");
+    }
+
+    .slide-inner>div:nth-child(2) {
+      background-image: url("./img/2.jpg");
+    }
+
+    .slide-inner>div:nth-child(3) {
+      background-image: url("./img/3.jpg");
+    }
+
+    .slide-inner>div::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide-inner>div:nth-child(1)::before {
+      background: linear-gradient(135deg, #7986cb, transparent);
+    }
+
+    .slide-inner>div:nth-child(2)::before {
+      background: linear-gradient(135deg, #bcaaa4, transparent);
+    }
+
+    .slide-inner>div:nth-child(3)::before {
+      background: linear-gradient(135deg, #cfd8dc, transparent);
+    }
+
+    .slide-inner>div em {
+      position: relative;
+      display: inline-block;
+      margin-left: 20px;
+      font-style: normal;
+      font-size: 80px;
+      font-weight: 300;
+      color: #f1f2f6;
+      text-align: center;
+      transform: translateY(-100px);
+      opacity: 0;
+      transition: .5s;
+      transition-delay: .5s;
+    }
+
+    input[id="tab1"]:checked~.slide .slide-inner div:nth-of-type(1) em,
+    input[id="tab2"]:checked~.slide .slide-inner div:nth-of-type(2) em,
+    input[id="tab3"]:checked~.slide .slide-inner div:nth-of-type(3) em {
+      transform: translateY(100px);
+      opacity: 1;
+    }
+
+    .btn {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .btn label {
+      display: inline-block;
+      margin: 0 15px;
+      padding: 0 12px;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[id="tab1"]:checked~.btn label[for="tab1"],
+    input[id="tab2"]:checked~.btn label[for="tab2"],
+    input[id="tab3"]:checked~.btn label[for="tab3"] {
+      background-color: #212121;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="wrapper">
+    <input type="radio" name="tab-menu" id="tab1" checked />
+    <input type="radio" name="tab-menu" id="tab2" />
+    <input type="radio" name="tab-menu" id="tab3" />
+    <div class="slide">
+      <div class="slide-inner">
+        <div>
+          <em>#Logo &amp; CI</em>
+        </div>
+        <div>
+          <em>#Web Publishing</em>
+        </div>
+        <div>
+          <em>#Graphic</em>
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+      <label for="tab1">Logo &amp; CI</label>
+      <label for="tab2">Web Publishing</label>
+      <label for="tab3">Graphic</label>
+    </div>
+  </div>
+
+</body>
+</html>
