@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 화면</title>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/254318af28.js" crossorigin="anonymous"></script>
+  <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #4cc499;
+      background-image: linear-gradient(-225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%);
+    }
+
+    a {
+      text-decoration: inherit;
+      color: inherit;
+    }
+
+    .login-form {
+      width: 800px;
+      padding: 30px 25px;
+      border: 1px solid #eee;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: #f1f2f6;
+      box-shadow: 0 0 25px rgb(0 0 0 / 35%);
+    }
+
+    .login-form>div+div {
+      margin-top: 20px;
+    }
+
+    .login-form h2 {
+      margin: 0 0 5px;
+      font-size: 16px;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"],
+    .login-form input[type="submit"] {
+      outline: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+      transition: .3s;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 15px 15px 15px 50px;
+      border: 1px solid #ddd;
+      color: #a4b0be;
+    }
+
+    .login-form input[type="email"] {
+      background: #fff url("./img/icon-email.png") no-repeat center left 10px;
+    }
+
+    .login-form input[type="password"] {
+      background: #fff url("./img/icon-lock.png") no-repeat center left 10px;
+    }
+
+    .login-form input[type="email"]:focus,
+    .login-form input[type="password"]:focus {
+      border-color: #4cc499;
+      box-shadow: 0 0 5px #4cc499;
+    }
+
+    .login-form input[type="email"]::placeholder,
+    .login-form input[type="password"]::placeholder {
+      color: #a4b0be;
+      opacity: 1;
+      visibility: visible;
+      transition: .2s;
+    }
+
+    .login-form input[type="email"]:focus::placeholder,
+    .login-form input[type="password"]:focus::placeholder {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .login-form div:nth-of-type(3) {
+      overflow: hidden;
+    }
+
+    .login-form .left {
+      float: left;
+    }
+
+    .login-form .right {
+      float: right;
+    }
+
+    .login-form a {
+      font-size: 12px;
+    }
+
+    .login-form input[id="save"] {
+      display: none;
+    }
+
+    .login-form label[for="save"] {
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .login-form label[for="save"]::before {
+      content: '\f00c';
+      font-family: fontawesome;
+      vertical-align: middle;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+      margin-right: 5px;
+      border: 1px solid #a4b0be;
+      color: #a4b0be;
+      border-radius: 3px;
+      font-size: 8px;
+      transition: .2s;
+    }
+
+    .login-form input[id="save"]:checked+label[for="save"]::before {
+      border-color: transparent;
+      background-color: #4cc499;
+      color: #fff;
+    }
+
+    .login-form a:hover {
+      text-decoration: underline;
+    }
+
+    .login-form input[type="submit"] {
+      display: block;
+      width: 300px;
+      padding: 10px;
+      margin-top: 20px;
+      border: none;
+      font-size: 24px;
+      color: #fff;
+      background-color: #4cc499;
+      cursor: pointer;
+    }
+
+    .login-form input[type="submit"]:hover {
+      background-color: rgb(53, 163, 125);
+    }
+  </style>
+</head>
+<body>
+  
+  <form action="#" class="login-form">
+    <div>
+      <h2>Email</h2>
+      <input type="email" placeholder="Email Address" />
+    </div>
+    <div>
+      <h2>Password</h2>
+      <input type="password" placeholder="Password" />
+    </div>
+    <div>
+      <div class="left">
+        <input type="checkbox" id="save" />
+        <label for="save">Keep me logged in</label>
+      </div>
+      <div class="right">
+        <a href="#">Forgot Your Password?</a>
+      </div>
+    </div>
+    <input type="submit" value="Log in" />
+  </form>
+
+</body>
+</html>
