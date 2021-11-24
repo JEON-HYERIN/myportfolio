@@ -10,7 +10,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
 
     body {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       line-height: 1.5em;
       font-weight: 300;
       margin: 0;
@@ -60,15 +60,15 @@
     }
 
     .slide-inner>div:nth-child(1) {
-      background-image: url("./img/1.jpg");
+      background-image: url("./img/color-cosmetics.jpg");
     }
 
     .slide-inner>div:nth-child(2) {
-      background-image: url("./img/2.jpg");
+      background-image: url("./img/essence.jpg");
     }
 
     .slide-inner>div:nth-child(3) {
-      background-image: url("./img/3.jpg");
+      background-image: url("./img/perfume.jpg");
     }
 
     .slide-inner>div::before {
@@ -81,15 +81,15 @@
     }
 
     .slide-inner>div:nth-child(1)::before {
-      background: linear-gradient(135deg, #7986cb, transparent);
+      background: linear-gradient(130deg, #ff6b81, transparent);
     }
 
     .slide-inner>div:nth-child(2)::before {
-      background: linear-gradient(135deg, #bcaaa4, transparent);
+      background: linear-gradient(135deg, #fa983a, transparent);
     }
 
     .slide-inner>div:nth-child(3)::before {
-      background: linear-gradient(135deg, #cfd8dc, transparent);
+      background: linear-gradient(135deg, #5758BB, transparent);
     }
 
     .slide-inner>div em {
@@ -97,8 +97,9 @@
       display: inline-block;
       margin-left: 20px;
       font-style: normal;
-      font-size: 80px;
+      font-size: 55px;
       font-weight: 300;
+      text-transform: uppercase;
       color: #f1f2f6;
       text-align: center;
       transform: translateY(-100px);
@@ -129,15 +130,22 @@
       display: inline-block;
       margin: 0 15px;
       padding: 0 12px;
+      border-radius: 2px;
       font-size: 18px;
       color: #fff;
       cursor: pointer;
     }
 
-    input[id="tab1"]:checked~.btn label[for="tab1"],
-    input[id="tab2"]:checked~.btn label[for="tab2"],
+    input[id="tab1"]:checked~.btn label[for="tab1"] {
+      background-color: #ff6b81;
+    }
+
+    input[id="tab2"]:checked~.btn label[for="tab2"] {
+      background-color: #fa983a;
+    }
+
     input[id="tab3"]:checked~.btn label[for="tab3"] {
-      background-color: #212121;
+      background-color: #5758BB;
     }
   </style>
 </head>
@@ -150,20 +158,20 @@
     <div class="slide">
       <div class="slide-inner">
         <div>
-          <em>#Logo &amp; CI</em>
+          <em>#color cosmetics</em>
         </div>
         <div>
-          <em>#Web Publishing</em>
+          <em>#essence</em>
         </div>
         <div>
-          <em>#Graphic</em>
+          <em>#perfume</em>
         </div>
       </div>
     </div>
     <div class="btn">
-      <label for="tab1">Logo &amp; CI</label>
-      <label for="tab2">Web Publishing</label>
-      <label for="tab3">Graphic</label>
+      <label for="tab1">Color cosmetics</label>
+      <label for="tab2">Essence</label>
+      <label for="tab3">Perfume</label>
     </div>
   </div>
 
