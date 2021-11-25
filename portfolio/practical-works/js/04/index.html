@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탭 메뉴 콘텐츠</title>
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      line-height: 1.5em;
+      margin: 0;
+      background-color: #1e272e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    a {
+      text-decoration: inherit;
+      color: inherit;
+    }
+
+    .testimonial {
+      width: 800px;
+      padding: 50px 30px;
+      text-align: center;
+      border-radius: 20px;
+      box-sizing: border-box;
+      box-shadow: 0 0 130px rgb(0 0 0 / 90%);
+      background-color: #ecf0f1;
+    }
+
+    .testimonial h1 {
+      margin: 0 0 50px;
+      font-size: 35px;
+    }
+
+    .testimonial h1 span {
+      color: #ffa801;
+    }
+
+    .testimonial .image img {
+      width: 100px;
+      filter: grayscale(1);
+      margin: 5px;
+      transition: .3s;
+      cursor: pointer;
+    }
+
+    .testimonial .image img.active {
+      border-radius: 50%;
+      filter: grayscale(0);
+    }
+
+    .testimonial .content {
+      display: none;
+    }
+
+    .testimonial .content.active {
+      display: block;
+    }
+
+    .testimonial .content h2 {
+      margin: 20px 0 15px;
+      font-size: 23px;
+      color: #485460;
+    }
+
+    .testimonial .content p {
+      color: #1e272e;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <section class="testimonial">
+      <h1>Please allow me to <span>introduce</span> myself</h1>
+      <div class="image">
+        <img class="active" src="./img/1.jpg" alt="" data-alt="tab1" />
+        <img src="./img/2.jpg" alt="" data-alt="tab2" />
+        <img src="./img/3.jpg" alt="" data-alt="tab3" />
+        <img src="./img/4.jpg" alt="" data-alt="tab4" />
+      </div>
+      <div class="content-group">
+        <div class="content active" id="tab1">
+          <h2>Jung Ho, Developer</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo reiciendis cumque, accusamus sunt magni libero
+            enim in quae a aspernatur facilis impedit dolores ipsum quis dolor nostrum, aperiam illum veniam esse
+            veritatis consequuntur nemo laudantium. Minima aspernatur aliquid quis, explicabo nam et, illum, amet rem
+            magnam autem fuga deserunt! Unde aliquam perspiciatis, repudiandae at error dolorum vel culpa. Quam,
+            placeat! Tempora ducimus natus aspernatur, ipsum dolores voluptatem debitis qui magnam.
+          </p>
+        </div>
+        <div class="content" id="tab2">
+          <h2>Amy, Graphic Designer</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, ipsam aliquam reiciendis accusantium
+            recusandae tempora nulla fugit suscipit commodi repellendus assumenda mollitia fugiat nam beatae quibusdam
+            odio quisquam delectus at. Ea, nobis? Tempore provident maxime veniam, ipsa placeat, maiores quod nostrum
+            sit repellat debitis, culpa vero. Sunt, id maiores. Rem?
+          </p>
+        </div>
+        <div class="content" id="tab3">
+          <h2>Chris, Printing Desinger</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, voluptatum, dolores fugiat nisi
+            aperiam eum reprehenderit alias totam earum, quam sint culpa harum. Ducimus saepe suscipit dignissimos, est
+            fugit dolores illum temporibus reiciendis architecto, quisquam a id optio expedita numquam eligendi error
+            maxime. Error iste labore modi harum, quaerat deserunt nulla odio commodi molestiae aperiam tempore totam,
+            vel nihil inventore.
+          </p>
+        </div>
+        <div class="content" id="tab4">
+          <h2>Sally, Web Desginer</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem tenetur, reprehenderit ipsa
+            accusantium, similique et ea dolores voluptates, iusto sunt quo. Veniam harum quibusdam porro
+            exercitationem. Architecto, soluta eveniet quasi minus dolores placeat temporibus doloremque consequuntur
+            dolor ad! Consequuntur, unde. Autem quos nobis magnam porro!
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    $('.testimonial .image img').click(function () {
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+      $('.testimonial .content').removeClass('active');
+      $('#' + $(this).attr('data-alt')).addClass('active');
+    });
+  </script>
+
+</body>
+</html>
