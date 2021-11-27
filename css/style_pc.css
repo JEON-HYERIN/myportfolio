@@ -154,10 +154,6 @@ p.description {
   cursor: default;
 }
 
-.main-visual .title span {
-  display: block;
-}
-
 /* ABOUT */
 .main-about {
   background-color: #eeeeee;

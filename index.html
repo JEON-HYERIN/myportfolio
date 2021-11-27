@@ -18,6 +18,8 @@
   <!-- Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!-- Typeit -->
+  <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style_pc.css" media="screen and (min-width: 850.1px)" />
@@ -57,8 +59,8 @@
         <h2 class="hide">비주얼 영역</h2>
         <div class="inner">
           <div class="title">
-            <span>#WEB PUBLISHER</span>
-            <span>#PORTFOLIO</span>
+            <span class="hide">#WEB PUBLISHER<br /> #PORTFOLIO</span>
+            <span class="visible"></span>
           </div>
         </div>
       </section>
@@ -733,6 +735,14 @@
         pracContainer.classList.remove('anim-out');
       }, 300);
     });
+  });
+
+  // TextPlugin
+  $('.main-visual .title span.visible').typeIt({
+    strings: ["#WEB PUBLISHER", "#PORTFOLIO"],
+    speed: 90,
+    waitUntilVisible: true,
+    autoStart: false,
   });
   </script>
 
